@@ -1,0 +1,242 @@
+.outer-frame
+.inner-frame
+.big-wrapper
+	.banner-container style="background-image: url(#{asset_path('main/banner1.jpg')})"
+		.inner-container
+			.top
+				.logo = inline_svg "logo/logo.svg"
+				p.super-small Мукачево, Червона гора, 1а
+			.middle	
+				p.main-subtitle непередбачувана оригінальність
+				p.main-title у кожній страві
+				.svg-and-lines = inline_svg "icons/grape.svg"
+			.middle-button
+				a.button href=''
+					.frame
+					span = inline_svg "icons/spoon-folk-button.svg"
+					p.button-text замовити столик
+			.bottom
+				p.georgia Дізнайтеся про нас
+				a.arrow-down = inline_svg "icons/arrow-down.svg"
+	.about-us
+		.row.collapse
+			.large-12.medium-12.small-12.columns.shadow-container
+				.row.collapse
+					.large-4.medium-6.small-12.columns
+						.square
+							.text-middle
+								p.subtitle Ресторан-винарня
+								p.subtitle-uppercased &#171;винний сад&#187;;
+								.grape = inline_svg "icons/grape.svg"
+								p.regular Якщо Вам набридли міський шум і повсякденні турботи, з’явилося бажання комфортно відпочити та спробувати витончені страви та багатий букет вин – відкрийте для себе новий ресторан-винарню «Винний сад» у місті Мукачево.
+					.large-8.medium-6.small-12.columns
+						.square-half
+							.background-photo style="background-image: url(#{asset_path('main/about-us.jpg')})"
+					.large-8.medium-6.small-12.go-right.columns
+						.square-half
+							.text
+								p.subtitle Атмосфера закладу
+								p.regular Вишукано оброблений інтер’єр ресторану, його затишна атмосфера, смачне та різноманітне меню припадуть Вам до душі. «Винний сад» – це місце для незабутнього дозвілля, приємних зустрічей та ділового спілкування.
+					.large-4.medium-6.small-12.go-left.columns
+						.square
+							.background-photo style="background-image: url(#{asset_path('main/wine.jpg')})"
+
+	.banner-container style="background-image: url(#{asset_path('main/banner2.jpg')})"
+		.section-text
+			p.section-title наша кухня
+			.svg-and-lines = inline_svg "icons/cheef-hat.svg"
+	.our-kitchen
+		.row.collapse
+			large-5.medium-5.small-5.columns
+				.chef-container
+					.chef-photo style="background-image: url(#{asset_path('main/chef.png')})"
+			large-7.medium-7.small-7.columns.shadow-container
+				.inner-container
+					.text
+						p.subtitle-uppercased наша кухня
+						p.regular Спробуйте новий смак вишуканих страв європейської та азіатської кухні. Кулінарне мистецтво наших кухарів не залишить байдужими справжніх гурманів.
+					.burgundy-block
+						p.georgia 27 видів страв
+					.background-photo style="background-image: url(#{asset_path('main/food-preparation.jpg')})"
+	.banner-container style="background-image: url(#{asset_path('main/banner3.jpg')})"
+		.section-text
+			p.section-title фірмові страви
+			.svg-and-lines = inline_svg "icons/food-white.svg"
+	.our-dishes
+		.row.collapse
+			large-8.medium-10.medium-12.columns
+				
+				.inner-container
+					.frame
+					.row
+						.large-6.medium-6.small-12.columns
+							.inner-text-left
+								p.subtitle-uppercased салат &#171;цезар&#187;
+								p.regular Хіт сезону
+								.line-right
+									.price-right
+										.text &#8372;110
+								p.description Ніжна куриця, свіже листя салату та апетитний сир під класичним соусом подарують Вам ні з чим незрівнянний смак улюбленого салату.
+								p.georgia
+									| 215 
+									span г
+						.large-6.medium-6.small-12.columns
+							.background-photo style="background-image: url(#{asset_path('main/dish1.jpg')})"
+						
+				.inner-container
+					.row						
+						.large-6.medium-6.small-12.columns.go-right
+							.inner-text-right
+								p.subtitle-uppercased паста з лососем
+								p.regular Пропозиція тижня
+							.line-left
+								.price-left
+									.text &#8372;120
+							.inner-text-right
+								p.description Справжня італійська паста з ніжним смаком лосося – спробуйте незвичайне поєднання звичних продуктів та відчуйте неймовірний смак цієї дивовижної страви.
+								p.georgia
+									| 300 
+									span г
+						.large-6.medium-6.small-12.columns.go-left
+							.background-photo style="background-image: url(#{asset_path('main/dish2.jpg')})"
+
+				.inner-container
+					.frame
+					.row
+						.large-6.medium-6.small-12.columns
+							.inner-text-left
+								p.subtitle-uppercased форель
+								p.regular Страва від шефа
+								.line-right
+									.price-right
+										.text &#8372;40
+								p.description Соковита королівська рибка, яка тане в роті. Смачно, корисно і вишукано! Чудовим доповненням до страви стане біле вино.
+								p.georgia
+									| 100 
+									span г
+						.large-6.medium-6.small-12.columns
+							.background-photo style="background-image: url(#{asset_path('main/dish3.jpg')})"
+
+				.inner-container
+					.row						
+						.large-6.medium-6.small-12.columns.go-right
+							.inner-text-right
+								p.subtitle-uppercased плов
+								p.regular Краща пропозиція
+							.line-left
+								.price-left
+									.text &#8372;55
+							.inner-text-right
+								p.description Соковите м’ясо, розсипчастий рис, свіжа морква та неймовірні аромати спецій – ось він, ідеальний плов!
+								p.georgia
+									| 260 
+									span г
+						.large-6.medium-6.small-12.columns.go-left
+							.background-photo style="background-image: url(#{asset_path('main/dish4.jpg')})"
+
+				.inner-container
+					.frame
+					.row
+						.large-6.medium-6.small-12.columns
+							.inner-text-left
+								p.subtitle-uppercased гарбузовий крем-суп
+								p.regular Страва від шефа
+								.line-right
+									.price-right
+										.text &#8372;55
+								p.description Ніжна консистенція, дивовижний аромат та м’який смак поживного супу придадуть енергії та здоров’я Вам та Вашій родині!
+								p.georgia
+									| 250 
+									span г
+						.large-6.medium-6.small-12.columns
+							.background-photo style="background-image: url(#{asset_path('main/dish5.jpg')})"
+
+	.wine-cellar
+		.section-text
+			p.section-title винні погреби
+			.svg-and-lines = inline_svg "icons/barrel.svg"
+			p.desktop Пориньте в атмосферу давнини вдало поєднану з сучасністю, відвідавши винні погреби винарні &#171;Винний сад&#187;. Переходячи з печери в печеру та куштуючи вино, Ви маєте змогу відчути багатовікову історію, яку зберігають стіни погребу, та в думках поринути в глибину віків і відчути смак та аромат цього чудового напою сивої давнини. Ми відкриємо для Вас всі тонкощі та грані мистецтва виноробства і таким чином здивуємо не лише новачка, але й гурмана.
+
+	.sliders-wrapper
+		.row.collapse.full-width
+			.large-6.medium-6.small-6.columns
+				.square
+					.slider-container-1
+						ul.bxslider
+							li
+								.img-container style="background-image: url(#{asset_path('main/ristorante1.jpg')})"
+							li
+								.img-container style="background-image: url(#{asset_path('main/ristorante2.jpg')})"
+							li
+								.img-container style="background-image: url(#{asset_path('main/ristorante3.jpg')})"
+						.squares#bx-pager
+							a data-slide-index="0" href=""
+							a data-slide-index="1" href=""
+							a data-slide-index="2" href=""
+			.large-6.medium-6.small-6.columns
+				.square
+					.slider-container-1
+						ul.bxslider
+							li
+								.img-container style="background-image: url(#{asset_path('main/ristorante1.jpg')})"
+							li
+								.img-container style="background-image: url(#{asset_path('main/ristorante2.jpg')})"
+							li
+								.img-container style="background-image: url(#{asset_path('main/ristorante3.jpg')})"
+						.squares#bx-pager
+							a data-slide-index="0" href=""
+							a data-slide-index="1" href=""
+							a data-slide-index="2" href=""
+
+	.banner-container style="background-image: url(#{asset_path('main/banner4.jpg')})"
+		.section-text
+			p.section-title інтер'єр та екстер'єр
+			.svg-and-lines = inline_svg "icons/cup.svg"
+
+	.restoran-interior
+		.row.collapse
+			.large-12.medium-12.small-12.small-centered.columns.shadow-container
+				.row.collapse
+					.large-6.medium-6.small-12.columns
+						.text
+							p.subtitle-uppercased головний зал
+							p.regular.person-numbers 60 персон
+							p.regular Привабливий інтер’єр та доброзичлива атмосфера чекають на Вас у ресторані &#171;Винний сад&#187;. Вишуканий дизайн, приємна музика та витончений смак улюбленого вина допоможуть Вам розслабитися та насолодитися добре проведеним часом в компанії друзів або наодинці з власними думками.
+							.white-square-right
+					.large-6.medium-6.small-12.columns
+						.background-photo style="background-image: url(#{asset_path('main/interior3.jpg')})"
+					.large-6.medium-6.small-12.go-right.columns
+						.text
+							p.subtitle-uppercased літня тераса
+							p.regular 30 персон
+							p.regular На території &#171;Винного саду&#187; Ви маєте нагоду насолодитися свіжим повітрям, сонячним теплом, прекрасним краєвидом, ласуючи кулінарними шедеврами. Затишний інтер’єр тераси у стилі прованс поєднує в собі простоту, комфорт та ексклюзивність.
+							.white-square-left
+					.large-6.medium-6.small-12.go-left.columns
+						.background-photo style="background-image: url(#{asset_path('main/interior4.jpg')})"
+					.large-6.medium-6.small-12.columns
+						.text
+							p.subtitle-uppercased &#171;vip&#187; - дегустаційний зал
+							p.regular.person-numbers 12 персон
+							p.regular Винарня &#171;Винний сад&#187; має власні дегустаційні зали, які інтригують своєю атмосферою і тішать шанувальників блискучою колекцією вин. Гості закладу мають змогу побувати на особливій дегустації в унікальній VIP-залі, яка вражає своєю неповторністю та розрахована на 12 осіб.
+							.white-square-right
+					.large-6.medium-6.small-12.columns
+						.background-photo style="background-image: url(#{asset_path('main/interior3.jpg')})"
+					.large-6.medium-6.small-12.go-right.columns
+						.text
+							p.subtitle-uppercased &#171;комфорт&#187; - дегустаційний зал
+							p.regular 50 персон
+							p.regular Також є можливість проводити групові дегустації в комфортній залі, яка розміщена в старовинних печерах та може вмістити до 50 осіб одночасно. Неперевершена колекція вин. Вина власного виробництва. Казковий інтер’єр. Все це подарує Вам справжнє задоволення.
+							.white-square-left
+					.large-6.medium-6.small-12.go-left.columns
+						.background-photo style="background-image: url(#{asset_path('main/interior4.jpg')})"
+					.large-6.medium-6.small-12.columns
+						.text
+							p.subtitle-uppercased дитячий майданчик
+							p.regular Запрошуємо наших маленьких гостей у цікаве та захоплююче місце для ігор та розваг. Професійні аніматори подбають про те, щоб Ваші діти отримали задоволення та яскраві емоції від розважальних програм та розвиваючих ігор. Перемістіться в захопливий світ пригод та фантазій разом з &#171;Винним садом&#187;.
+							.white-square-right
+					.large-6.medium-6.small-12.columns
+						.background-photo style="background-image: url(#{asset_path('main/interior5.jpg')})"
+	.banner-container style="background-image: url(#{asset_path('main/banner4.jpg')})"
+		.section-text
+			p.section-title зарезервувати столик
+			.svg-and-lines = inline_svg "icons/spoon-folk-button.svg"

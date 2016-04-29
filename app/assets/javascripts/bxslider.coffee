@@ -9,11 +9,24 @@ $(document).ready ->
   $('.bxslider').bxSlider
     pagerCustom: '#bx-pager'
     controls: false
-    infiniteLoop: false
+    infiniteLoop: true
     hideControlOnEnd: true
     speed: 1000
-    pause: 10000
+    pause: 5000
     auto: true
     infiniteLoop: true
     onSlideBefore: (element, oldIndex, newIndex)->
         change_slide(newIndex)
+
+$(document).ready ->
+  $('.bxslider2').bxSlider
+    controls: false
+    pager: false
+    infiniteLoop: true
+    hideControlOnEnd: true
+    speed: 1000
+    pause: 5000
+    auto: true
+    infiniteLoop: true
+    nextSelector: '.wine-arrow-left'
+    prevSelector: '.wine-arrow-right'

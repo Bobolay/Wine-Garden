@@ -27,7 +27,7 @@
 							.text-middle
 								p.subtitle Ресторан-винарня
 								p.subtitle-uppercased &#171;винний сад&#187;;
-								.grape = inline_svg "icons/grape.svg"
+								.svg-and-lines-small = inline_svg "icons/grape.svg"
 								p.regular Якщо Вам набридли міський шум і повсякденні турботи, з’явилося бажання комфортно відпочити та спробувати витончені страви та багатий букет вин – відкрийте для себе новий ресторан-винарню «Винний сад» у місті Мукачево.
 					.large-8.medium-6.small-12.columns
 						.square-half
@@ -68,6 +68,8 @@
 				
 				.inner-container
 					.frame
+						.left-border
+						.right-border
 					.row
 						.large-6.medium-6.small-12.columns
 							.inner-text-left
@@ -93,7 +95,7 @@
 								.price-left
 									.text &#8372;120
 							.inner-text-right
-								p.description Справжня італійська паста з ніжним смаком лосося – спробуйте незвичайне поєднання звичних продуктів та відчуйте неймовірний смак цієї дивовижної страви.
+								p.description.appear Справжня італійська паста з ніжним смаком лосося – спробуйте незвичайне поєднання звичних продуктів та відчуйте неймовірний смак цієї дивовижної страви.
 								p.georgia
 									| 300 
 									span г
@@ -161,7 +163,7 @@
 		.row.collapse.full-width
 			.large-6.medium-6.small-6.columns
 				.square
-					.slider-container-1
+					.slider-container
 						ul.bxslider
 							li
 								.img-container style="background-image: url(#{asset_path('main/ristorante1.jpg')})"
@@ -175,18 +177,29 @@
 							a data-slide-index="2" href=""
 			.large-6.medium-6.small-6.columns
 				.square
-					.slider-container-1
-						ul.bxslider
+					.slider-container2
+						ul.bxslider2
 							li
-								.img-container style="background-image: url(#{asset_path('main/ristorante1.jpg')})"
+								.img-container style="background-image: url(#{asset_path('main/wine1.jpg')})"
 							li
-								.img-container style="background-image: url(#{asset_path('main/ristorante2.jpg')})"
+								.img-container style="background-image: url(#{asset_path('main/wine2.jpg')})"
 							li
-								.img-container style="background-image: url(#{asset_path('main/ristorante3.jpg')})"
-						.squares#bx-pager
-							a data-slide-index="0" href=""
-							a data-slide-index="1" href=""
-							a data-slide-index="2" href=""
+								.img-container style="background-image: url(#{asset_path('main/wine3.jpg')})"
+					.wine-type-1.visible
+						p.regular вино біле сухе
+						p.subtitle-uppercased &#171;pinot grigio&#187;
+						p.regular Рік розливу: 2014
+					.wine-type-2
+						p.regular вино червоне сухе
+						p.subtitle-uppercased &#171;gridio pinot&#187;
+						p.regular Рік розливу: 2012
+					.wine-type-3
+						p.regular вино червоне напівсолодке
+						p.subtitle-uppercased &#171;gridio grigio&#187;
+						p.regular Рік розливу: 2010
+					.wine-arrow-left = inline_svg "icons/wine-arrow-left.svg"
+					.wine-arrow-right = inline_svg "icons/wine-arrow-right.svg"
+
 
 	.banner-container style="background-image: url(#{asset_path('main/banner4.jpg')})"
 		.section-text
@@ -240,3 +253,106 @@
 		.section-text
 			p.section-title зарезервувати столик
 			.svg-and-lines = inline_svg "icons/spoon-folk-button.svg"
+	.form-wrapper
+		.row.collapse
+			.large-10.large-centered.medium-10.medium-centered.small-12.columns.shadow-container
+				.form-container
+					p.subtitle-uppercased форма резервації столика
+					form
+						p.georgia На яку кількість персон резервуємо?
+						.radio-boxes
+							- %w(2 4 6 8+).each_with_index do |v, i|
+								- input_id = "quantity_#{i+1}"
+								label.option for=input_id
+									input id=input_id type="radio" name="quantity" value=v
+									label for=input_id
+										label.text for=input_id
+											= v
+										label.rect for=input_id
+						
+							
+							.line
+						.row
+							.large-6.medium-6.small-12.columns
+								.group
+									input type="text"
+										span.bar
+									label
+										| На кого резервуємо?:
+										span &lowast;
+								.group
+									input type="text"
+										span.bar
+									label
+										| Телефон: 
+										span &lowast;
+								.group-half
+									input type="text"
+										.icon = inline_svg "icons/form-date.svg"
+										span.bar
+									label
+										| Дата: 
+										span &lowast;
+								.group-half
+									input type="text"
+										.icon = inline_svg "icons/form-time.svg"
+										span.bar
+									label Час: &lowast;
+							.large-6.medium-6.small-12.columns
+								.group
+									textarea rows="7"
+									p.above-text-area Особливі побажання
+						a.button href=''
+							.frame
+							span = inline_svg "icons/spoon-folk-button.svg"
+							p.button-text замовити столик
+	#googleMap
+	.contact-us
+		.row.collapse
+			.large-8.large-centered.medium-10.medium-centered.small-12.columns.shadow-container
+				.container
+					.inner-text	
+						.subtitle-uppercased контакти
+						.svg-and-lines-small = inline_svg "icons/contacts-phone-wine.svg"
+						.row
+							.large-4.medium-4.small-12.columns
+								.svg-icon = inline_svg "icons/contacts-phone.svg"
+								p.small телефони
+								p.bigger +38 050 739 0101
+							.large-4.medium-4.small-12.columns
+								.svg-icon = inline_svg "icons/contacts-geo.svg"
+								p.small адреса
+								p.bigger вул. Червона гора, 1а Мукачево, Україна
+							.large-4.medium-4.small-12.columns
+								.svg-icon = inline_svg "icons/contacts-time.svg"
+								p.small працюємо
+								p.bigger
+									| 12
+									span 00
+									|  &mdash; 22
+									span 00
+					.social
+						a.social-button
+							.icon = inline_svg "icons/social-fb.svg"
+						a.social-button
+							.icon = inline_svg "icons/social-fb.svg"
+						a.social-button
+							.icon = inline_svg "icons/social-utube.svg"	
+	.footer
+		.row
+		 	.large-6.medium-12.small-12.columns
+				.container	
+					.logo = inline_svg "icons/voronin-logo.svg"
+			 		p
+			 			| Розроблено в студії М.Вороніна
+			 			br
+			 			| в 2016 році
+		 	.large-6.medium-12.small-12.columns
+		 		.container
+		 			p &copy; 2016 Ресторан-винарня &#171;Винний сад&#187;
+
+
+
+
+
+

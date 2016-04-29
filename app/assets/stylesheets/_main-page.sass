@@ -1,3 +1,5 @@
+.big-wrapper
+	position: relative
 .banner-container
 	position: relative
 	background-size: cover
@@ -6,13 +8,13 @@
 	height: 50vh
 	&:first-child
 		height: 100vh
-	&:before
-		content: ''
-		position: absolute
-		width: 100%
-		height: 100%
-		background-color: black
-		opacity: 0.3
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background-color: black
+			opacity: 0.3
 	.inner-container
 		position: relative
 		top: 50%
@@ -28,14 +30,10 @@
 			top: 30%
 		.middle-button
 			top: 60%
-			span
-				display: inline-block
-				width: 30px
-				height: 30px
 		.bottom
 			top: 80%
 			cursor: pointer
-.about-us, .our-kitchen, .restoran-interior
+.about-us, .our-kitchen, .restoran-interior, .form-wrapper
 	margin-left: 15px
 	margin-right: 15px
 	position: relative
@@ -54,24 +52,6 @@
 		padding: 30px
 	.text-middle
 		text-align: center
-		.grape
-			position: relative
-			fill: $wine
-			width: 20px
-			height: 20px
-			display: block
-			margin: 0 auto
-			&:before, &:after
-				content: ''
-				position: absolute
-				width: 50px
-				height: 1px
-				background-color: $wine
-				top: 50%
-			&:before
-				right: 30px
-			&:after
-				left: 30px
 		.regular
 			margin-top: 10px
 	.text
@@ -125,16 +105,6 @@
 		margin-bottom: 30px
 		@media #{$small-only}
 			padding: 0
-		.frame
-			width: 100%
-			height: 100%
-			border: 1px solid $light-grey
-			position: absolute
-			top: 0
-			left: -60px
-			z-index: 2
-			@media #{$small-only}
-				display: none
 		.regular
 			color: $light-grey
 		.line-right
@@ -193,24 +163,58 @@
 			width: 90%
 	.desktop
 		margin-top: 10px
+.sliders-wrapper
+	.square
+		background-color: #fff
 .full-width
 	max-width: none
-	.slider-container-1
+	.slider-container
 		position: absolute
 		width: 100%
 		height: 100%
-		.bx-wrapper
-			height: 100%
-		.bx-viewport
-			height: 100% !important
-		.bxslider
-			height: 100%
-		li
-			height: 100%
-		.img-container
-			background-position: center
-			background-size: cover
-			height: 100%
+	.slider-container2
+		position: absolute
+		width: 75%
+		height: 75%
+		left: 50%
+		+translate(-50%,0)
+	.bx-wrapper
+		height: 100%
+	.bx-viewport
+		height: 100% !important
+	.bxslider, .bxslider2
+		height: 100%
+		overflow: hidden
+	li
+		height: 100%
+	.img-container
+		background-position: center
+		background-size: cover
+		height: 100%
+	.wine-type-1, .wine-type-2, .wine-type-3
+		height: 20%
+		position: absolute
+		bottom: 0
+		text-align: center
+		opacity: 0
+		+transition(0.3s)
+		+x-align
+		&.visible
+			opacity: 1
+		.subtitle-uppercased
+			font-weight: bold
+		.regular
+			&:first-child
+				text-transform: uppercase
+			&:last-child
+				color: $light-grey
+				margin-top: 10px
+	.wine-arrow-left
+		+y-align
+		left: 10%
+	.wine-arrow-right
+		+y-align
+		right: 10%
 .squares
 	+x-align
 	bottom: 30px
@@ -261,3 +265,131 @@
 				bottom: -10px
 				left: 40px
 				top: initial
+
+
+.form-wrapper
+.form-container
+	background-color: #fff
+	.subtitle-uppercased
+		line-height: 60px
+		text-align: center
+		background-color: $wine
+		color: #fff
+	form
+		padding: 40px 70px
+	.georgia
+		color: $light-grey
+		text-align: center
+	.radio-boxes
+		text-align: center
+		margin: 30px
+		position: relative
+		.option
+			margin: 0 20px
+		.text
+			position: relative
+			z-index: 3
+		label
+			color: $light-grey
+			position: relative
+			display: inline-block
+			width: 40px
+			line-height: 40px
+			top: 0
+		.rect
+			display: block
+			position: absolute
+			width: 40px
+			height: 40px
+			border: 1px solid $light-grey
+			+rotate(45deg)
+			top: 1px
+			left: 0
+			z-index: 2
+			background: #fff
+	.line
+		height: 1px
+		width: 100%
+		background-color: $light-grey
+		position: absolute
+		top: 50%
+
+	.radio-boxes
+		input
+			display: none
+		.option
+		input:not(:checked) 
+			& ~ .square-reserve
+
+
+		input:checked 
+			& ~ .option
+			& ~ label 
+				.rect
+					background: $wine
+
+#googleMap
+	height: 60vh
+	width: 100%
+	position: absolute
+
+.footer
+	position: relative
+	.columns
+		height: 70px
+	+opensans
+	font-size: 0.75em
+	color: #fff
+	background-color: $wine
+	.container
+		position: relative
+		top: 50%
+		left: 50%
+		+translate(-50%,-50%)
+		display: inline-block
+	.logo
+		display: inline-block
+		margin: 0 10px 0 0
+	p
+		display: inline-block
+.contact-us
+	position: relative
+	margin-top: 300px
+	top: 10px
+	z-index: 2
+	.container
+		background-color: #fff
+	.inner-text
+		padding: 30px 0
+		text-align: center
+	.subtitle-uppercased
+	.svg-icon
+		margin-top: 10px
+	.small
+		text-transform: uppercase
+		color: $light-grey
+	.bigger
+		color: $wine
+		margin-top: 10px
+		span
+			text-decoration: underline
+			font-size: 0.55em
+			vertical-align: text-top
+	.social
+		background-color: #DFDFDF
+		text-align: center
+		padding: 20px
+		border-top: 1px solid $wine
+		.social-button
+			width: 30px
+			height: 30px
+			display: inline-block
+			background-color: $wine
+			margin: 0 5px
+			vertical-align: middle
+			cursor: pointer
+			.icon
+				position: relative
+				top: 50%
+				+translate(0,-50%)
+				line-height: normal

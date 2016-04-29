@@ -311,18 +311,19 @@
 									label
 										| Телефон: 
 										span &lowast;
-								.group-half
-									input type="text"
-										.icon = inline_svg "icons/form-date.svg"
-										span.bar
-									label
-										| Дата: 
-										span &lowast;
-								.group-half
-									input type="text"
-										.icon = inline_svg "icons/form-time.svg"
-										span.bar
-									label Час: &lowast;
+								.date-time-container
+									.group-left
+										input type="text"
+											.icon = inline_svg "icons/form-date.svg"
+											span.bar
+										label
+											| Дата: 
+											span &lowast;
+									.group-right
+										input type="text"
+											.icon = inline_svg "icons/form-time.svg"
+											span.bar
+										label Час: &lowast;
 							.large-6.medium-6.small-12.columns
 								.group
 									textarea rows="7"

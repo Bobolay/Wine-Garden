@@ -90,28 +90,49 @@ $grey: #606060
 	text-transform: uppercase
 	@media #{$small-only}
 		font-size: 1.875em
+		line-height: 36px
 
 //                                  O T H E R
 
+
+.button
+	position: relative
+	height: 55px
+	display: block
+	margin: 0 auto
+	text-decoration: none
+	+burgundy(250px)
+	&:after
+		position: absolute
+		background: url(#{asset_path('main/Klyaksa.png')})
+		content: ''
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-size: cover
+		background-position: center
+		opacity: 0.5
+
+
+
 .price-right, .price-left
 	position: absolute
-	background: url(#{asset_path('main/Klyaksa.png')})
-	background-position: center
-	width: 60px
 	line-height: 60px
-	z-index: 2
-	// right: -60px
+	display: block
 	top: -30px
-	text-align: center
+	+burgundy(60px)
 	&:after
 		content: ''
 		position: absolute
-		background-color: rgba(101,13,21, 0.75)
+		background: url(#{asset_path('main/Klyaksa.png')})
 		background-position: center
+		background-size: initial
 		top: 0
 		left: 0
-		width: 100%
-		height: 100%
+		right: 0
+		bottom: 0
+		opacity: 0.5
 	.text
 		color: #fff
 		font-size: 1.3125em
@@ -233,7 +254,7 @@ $grey: #606060
 	transform: translate(-50%,-50%)
 	color: #fff
 	text-align: center
-	width: 100%
+	width: 90%
 //                   I C O N S     W I T H     S I D E     L I N E S
 .svg-and-lines
 	position: relative

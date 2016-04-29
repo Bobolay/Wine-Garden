@@ -99,6 +99,8 @@
 		position: relative
 		height: 45vh
 		width: 100%
+		@media #{$small-only}
+			display: none
 		.chef-photo
 			position: absolute
 			height: 100%
@@ -114,6 +116,8 @@
 			text-align: center
 			padding: 30px 50px
 			height: 50%
+			@media #{$small-only}
+				padding: 20px
 		.square-container
 			position: absolute
 			left: 50%
@@ -141,6 +145,8 @@
 		margin-bottom: 30px
 		@media #{$small-only}
 			padding: 0
+		.subtitle-uppercased
+			line-height: 24px
 		.regular
 			color: $light-grey
 		.line-right
@@ -166,6 +172,7 @@
 			@media #{$small-only}
 				padding: 10px 0 0 0
 				width: 75%
+				font-size: 0.875em
 		.georgia
 			color: $wine
 			font-size: 1.25em
@@ -202,6 +209,8 @@
 .sliders-wrapper
 	.square
 		background-color: #fff
+		&:after
+			padding-bottom: 100%
 .full-width
 	max-width: none
 	.slider-container
@@ -228,7 +237,8 @@
 		background-size: cover
 		height: 100%
 	.wine-type-1, .wine-type-2, .wine-type-3
-		height: 20%
+		height: 25%
+		width: 100%
 		position: absolute
 		bottom: 0
 		text-align: center
@@ -245,6 +255,8 @@
 			&:last-child
 				color: $light-grey
 				margin-top: 10px
+				@media #{$small-only}
+					margin-top: 0
 	.wine-arrow-left
 		+y-align
 		left: 10%
@@ -267,17 +279,25 @@
 	.text
 		padding: 30px
 		background-color: #fff
+		@media #{$small-only}
+			padding: 20px
+		.subtitle-uppercased
+			line-height: 24px
 		.person-numbers
 			padding-top: 10px
 			color: $light-grey
 			font-size: 0.875em
+			@media only screen and (max-width: 320px)
+				padding-top: 0
 		.regular
 			padding-top: 10px
+			@media only screen and (max-width: 320px)
+				padding-top: 0
 	.text, .background-photo
 		height: 300px
 		position: relative
-		@media #{$small-only}
-			height: 200px
+		// @media #{$small-only}
+		// 	height: 250px
 		.white-square-right, .white-square-left
 			display: block
 			position: absolute

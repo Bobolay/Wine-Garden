@@ -66,9 +66,14 @@
 	&.appeared
 		opacity: 1
 		+translate(0,0)
+	@media #{$small-only}
+		opacity: 1
+		+translate(0,0)
 .line-left
 	width: 0
 	+transition(1s)
 	+transition-delay(3s)
 	&.appeared
+		width: 103%
+	@media #{$small-only}
 		width: 103%

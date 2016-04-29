@@ -9,6 +9,8 @@
 
 #= require plugins/google-map
 
+#= require scroll-banner
+
 #= require plugins/jquery-easing
 #= require plugins/jquery.appear
 #= require appear-initialize

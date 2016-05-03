@@ -7,10 +7,6 @@ class PagesController < ApplicationController
   #   set_page_metadata(:home)
   end
 
-  def about_us
-
-  end
-
   private
 
   def set_page_instance

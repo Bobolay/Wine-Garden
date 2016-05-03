@@ -14,6 +14,7 @@ $(document).ready ->
     speed: 1000
     pause: 5000
     auto: true
+    easing: 'swing'
     infiniteLoop: true
     onSlideBefore: (element, oldIndex, newIndex)->
         change_slide(newIndex)

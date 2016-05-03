@@ -14,3 +14,6 @@
 #= require plugins/jquery-easing
 #= require plugins/jquery.appear
 #= require appear-initialize
+
+#= require plugins/jquery.nicescroll.min
+#= require niceScroll

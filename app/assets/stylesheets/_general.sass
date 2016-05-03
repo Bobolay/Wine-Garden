@@ -114,7 +114,9 @@ $grey: #606060
 		background-position: center
 		opacity: 0.5
 
-
+.z-index
+	position: relative
+	z-index: 2
 
 .price-right, .price-left
 	position: absolute
@@ -122,6 +124,10 @@ $grey: #606060
 	display: block
 	top: -30px
 	+burgundy(60px)
+	+scale(0)
+	+transition(1s)
+	&.appeared
+		+scale(1)
 	&:after
 		content: ''
 		position: absolute
@@ -270,8 +276,12 @@ $grey: #606060
 		height: 2px
 		background-color: #fff
 		top: 50%
+		+transition(1s)
 		@media #{$small-only}
 			height: 1px
+	// &.appeared
+	// 	&:before, &:after
+	// 		width: 100px
 	&:before
 		right: 40px
 	&:after

@@ -4,7 +4,6 @@
 .dish-frame
 	width: 100%
 	height: 100%
-	// border: 1px solid $light-grey
 	position: absolute
 	top: 0
 	left: -60px
@@ -21,7 +20,7 @@
 		top: 0
 		+translate(-100%,0)
 		+transition(1s)
-		+transition-delay(0.5s)
+		+transition-delay(2s)
 	&:after
 		content: ''
 		width: 100%
@@ -31,7 +30,7 @@
 		bottom: 0
 		+translate(-100%,0)
 		+transition(1s)
-		+transition-delay(1.5s)
+		+transition-delay(3s)
 	.left-border
 		content: ''
 		height: 100%
@@ -41,7 +40,7 @@
 		left: 0
 		+translate(0,-100%)
 		+transition(1s)
-		+transition-delay(0.5s)
+		+transition-delay(2s)
 	.right-border
 		content: ''
 		height: 100%
@@ -51,18 +50,52 @@
 		right: 0
 		+translate(0,-100%)
 		+transition(1s)
-		+transition-delay(1.5s)
+		+transition-delay(3s)
 	&.appeared
 		&:before, &:after, .left-border, .right-border
 			+translate(0,0)
 
+//                              A B O U T     U S
+
+.about-us
+	.text, .text-middle
+		opacity: 0
+		+transition(1s)
+		+transition-delay(0.2s)
+		&.appeared
+			opacity: 1
+		@media #{$small-only}
+			opacity: 1
+
+//                               O U R     K I T C H E N
+
+.our-kitchen
+	.chef-photo
+		+translate(-50%,0)
+		+transition(1s)
+		+transition-delay(0.5s)
+		opacity: 0
+		&.appeared
+			+translate(0,0)
+			opacity: 1
+		@media #{$small-only}
+			+translate(0,0)
+			opacity: 1
+	.text
+		opacity: 0
+		+transition(1s)
+		+transition-delay(0.2s)
+		&.appeared
+			opacity: 1
+		@media #{$small-only}
+			opacity: 1
 //                               D I S H     T E X T
 
 .inner-text-right
 	opacity: 0
 	+translate(50%,0)
-	+transition-delay(0.5s)
-	+transition(3s)
+	+transition-delay(1s)
+	+transition(2s)
 	&.appeared
 		opacity: 1
 		+translate(0,0)
@@ -72,8 +105,32 @@
 .line-left
 	width: 0
 	+transition(1s)
-	+transition-delay(3s)
+	+transition-delay(2s)
 	&.appeared
 		width: 103%
 	@media #{$small-only}
 		width: 103%
+
+//                 I N T E R I O R     A N D     E X T E R I O R
+
+.restoran-interior
+	.left-to-right
+		+translate(-10%,0)
+		opacity: 0
+		+transition(1s)
+		&.appeared
+			opacity: 1
+			+translate(0,0)
+		@media #{$small-only}
+			+translate(0,0)
+			opacity: 1
+	.right-to-left
+		opacity: 0
+		+transition(1s)
+		+translate(10%,0)
+		&.appeared
+			+translate(0,0)
+			opacity: 1
+		@media #{$small-only}
+			+translate(0,0)
+			opacity: 1

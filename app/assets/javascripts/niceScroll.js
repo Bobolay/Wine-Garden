@@ -1,3 +1,5 @@
 $(document).ready(function() {  
-    $("html").niceScroll({cursorcolor:"#00F"});
+    $("html").niceScroll({
+    	cursorcolor:"#650D15"
+    });
 });

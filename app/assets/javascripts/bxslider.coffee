@@ -12,7 +12,7 @@ $(document).ready ->
     infiniteLoop: true
     hideControlOnEnd: true
     speed: 1000
-    pause: 5000
+    pause: 6000
     auto: true
     easing: 'swing'
     infiniteLoop: true
@@ -20,14 +20,19 @@ $(document).ready ->
         change_slide(newIndex)
 
 $(document).ready ->
-  $('.bxslider2').bxSlider
-    controls: false
-    pager: false
-    infiniteLoop: true
-    hideControlOnEnd: true
-    speed: 1000
-    pause: 5000
-    auto: true
-    infiniteLoop: true
-    nextSelector: '.wine-arrow-left'
-    prevSelector: '.wine-arrow-right'
+    slider = $('.bxslider2').bxSlider
+        controls: false
+        mode: 'fade'
+        pager: false
+        infiniteLoop: true
+        hideControlOnEnd: true
+        speed: 1000
+        pause: 5000
+        auto: true
+        infiniteLoop: true
+    $('.wine-arrow-left').click ->
+      current = slider.getCurrentSlide()
+      slider.goToPrevSlide(current) - 1
+    $('.wine-arrow-right').click ->
+      current = slider.getCurrentSlide()
+      slider.goToNextSlide(current) + 1

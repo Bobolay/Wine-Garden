@@ -2,8 +2,8 @@
 
 #= require jquery_ujs
 
-#= require plugins/jquery.nicescroll.min
-#= require niceScroll
+# require plugins/jquery.nicescroll.min
+# require niceScroll
 
 #= require plugins/jquery.bxslider
 #= require bxslider

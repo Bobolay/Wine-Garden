@@ -19,4 +19,4 @@
 #= require plugins/jquery.appear
 #= require appear-initialize
 
-#= require paralax
+#= require plugins/parallax.min

@@ -35,7 +35,7 @@
 		height: 90%
 		width: 90%
 		text-align: center
-		z-index: 2
+		z-index: 3
 		.top, .middle, .middle-button, .bottom
 			+x-align
 		.top
@@ -219,6 +219,8 @@
 		text-align: center
 		@media #{$medium-only}
 			width: 90%
+		@media #{$small-only}
+			padding: 20px 0
 	.desktop
 		margin-top: 20px
 .sliders-wrapper
@@ -253,8 +255,12 @@
 		text-align: center
 		+x-align
 		bottom: 30px
+		@media #{$small-only}
+			bottom: 10px
 		.subtitle-uppercased
 			font-weight: bold
+			@media #{$small-only}
+				font-size: 1em
 		.regular
 			&:first-child
 				text-transform: uppercase
@@ -263,6 +269,8 @@
 				margin-top: 10px
 				@media #{$small-only}
 					margin-top: 0
+			@media #{$small-only}
+				font-size: 0.75em
 	.wine-arrow-left, .wine-arrow-right
 		+y-align
 		cursor: pointer

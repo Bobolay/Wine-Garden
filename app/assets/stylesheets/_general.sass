@@ -94,26 +94,6 @@ $grey: #606060
 
 //                                  O T H E R
 
-
-.button
-	position: relative
-	height: 55px
-	display: block
-	margin: 0 auto
-	text-decoration: none
-	+burgundy(250px)
-	&:after
-		position: absolute
-		background: url(#{asset_path('main/Klyaksa.png')})
-		content: ''
-		top: 0
-		right: 0
-		bottom: 0
-		left: 0
-		background-size: cover
-		background-position: center
-		opacity: 0.5
-
 .z-index
 	position: relative
 	z-index: 2
@@ -162,6 +142,8 @@ $grey: #606060
 	z-index: 2
 	@media #{$large-up}
 		bottom: 100px
+	@media #{$small-only}
+		display: none
 .inner-frame
 	position: absolute
 	top: 35px
@@ -173,32 +155,8 @@ $grey: #606060
 	z-index: 2
 	@media #{$large-up}
 		bottom: 105px
-
-// #top, #bottom, #left, #right
-// 	background: transparent
-// 	position: fixed
-// 	z-index: 2
-// 	border: 1px solid #000000
-// #left, #right
-// 	top: 30px
-// 	bottom: 0
-// 	width: 5px
-// 	@media #{$small-only}
-// 		width: 5px
-// #left
-// 	left: 30px
-// #right
-// 	right: 30px
-// #top, #bottom
-// 	left: 30px
-// 	right: 30px
-// 	height: 5px
-// 	@media #{$small-only}
-// 		height: 5px
-// #top
-// 	top: 30px
-// #bottom
-// 	bottom: 30px
+	@media #{$small-only}
+		display: none
 
 .go-left
 	float: left !important

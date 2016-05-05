@@ -8,6 +8,7 @@
 	background-repeat: no-repeat
 	height: 50vh
 	box-shadow: inset 0 0 20px rgba(0,0,0, 0.5)
+	overflow: hidden
 	&:first-child
 		height: 100vh
 		&:before
@@ -58,16 +59,14 @@
 				+x-align
 				top: 25px
 				// position: absolute
-			&:hover
-				.arrow-down-inside
-					animation: bounce 2s
-					@keyframes bounce
-						0%, 20%, 50%, 80%, 100%
-							margin-top: 0
-						40%
-							margin-top: 7px
-						60%
-							margin-top: 5px
+				animation: bounce 2s infinite
+				@keyframes bounce
+					0%, 20%, 50%, 80%, 100%
+						margin-top: 0
+					40%
+						margin-top: 7px
+					60%
+						margin-top: 5px
 
 .about-us, .our-kitchen, .restoran-interior, .form-wrapper
 	margin-left: 15px
@@ -79,7 +78,9 @@
 	@media #{$small-only}
 		margin-top: -50px
 		top: 25px
-.about-us	
+.about-us
+	position: relative
+	z-index: 3
 	.text, .text-middle, .background-photo, .white-background
 		position: absolute
 		top: 0
@@ -103,18 +104,17 @@
 .our-kitchen
 	.chef-container
 		position: relative
-		height: 500px
-		width: 100%
-		top: -47px
+		height: 520px
+		width: 350px
+		top: -50px
 		@media #{$small-only}
 			display: none
 		.chef-photo
 			position: absolute
 			height: 100%
 			width: 100%
-			background-size: contain
+			background-size: cover
 			background-position: center
-			background-repeat: no-repeat
 	.inner-container
 		height: 500px
 		position: relative
@@ -142,6 +142,7 @@
 		.background-photo
 			height: 50%
 			width: 100%
+			background-position: top
 
 
 
@@ -198,8 +199,8 @@
 				margin-top: 10px
 		.inner-text-right
 			position: relative
-			width: 70%
-			left: 30%
+			width: 80%
+			left: 20%
 			.description
 				width: 100%
 .wine-cellar
@@ -213,14 +214,16 @@
 	.wine-text
 		width: 50%
 		margin: 0 auto
-		padding: 50px 0
+		padding: 80px 0
 		color: #fff
 		text-align: center
 		@media #{$medium-only}
 			width: 90%
 	.desktop
-		margin-top: 10px
+		margin-top: 20px
 .sliders-wrapper
+	position: relative
+	z-index: 3
 	.square
 		background-color: #fff
 		&:after
@@ -233,21 +236,23 @@
 		height: 100%
 	.slider-container2
 		position: absolute
-		width: 75%
-		height: 75%
-		left: 50%
-		+translate(-50%,0)
-	.wine-type-1, .wine-type-2, .wine-type-3
-		height: 25%
 		width: 100%
+		height: 100%
+	.bxslider2
+		height: 100%
 		position: absolute
-		bottom: 0
+		width: 100%
+		height: 100%
+		.img-container
+			height: 80%
+			width: 60%
+			+x-align
+	.img-container
+		height: 100%
+	.wine-type
 		text-align: center
-		opacity: 0
-		+transition(0.3s)
 		+x-align
-		&.visible
-			opacity: 1
+		bottom: 30px
 		.subtitle-uppercased
 			font-weight: bold
 		.regular
@@ -263,6 +268,7 @@
 		cursor: pointer
 		+transition(0.5s)
 		padding: 20px
+		z-index: 111
 	.wine-arrow-left
 		left: 10%
 		&:hover
@@ -284,6 +290,7 @@
 			background-color: $wine
 
 .restoran-interior
+	z-index: 3
 	.text
 		padding: 30px
 		background-color: #fff
@@ -328,6 +335,9 @@
 				left: 40px
 				top: initial
 
+.form-wrapper
+	position: relative
+	z-index: 3
 .form-container
 	background-color: #fff
 	.subtitle-uppercased
@@ -396,11 +406,26 @@
 					background: $wine
 
 #googleMap
-	height: 60vh
+	height: 600px
 	width: 100%
 	position: absolute
-	bottom: 70px
+	bottom: 140px
 	box-shadow: inset 0 0 20px rgba(0,0,0, 0.5)
+	@media #{$large-up}
+		bottom: 70px
+	@media #{$small-only}
+		bottom: 350px
+.shadow-for-map
+	height: 600px
+	width: 100%
+	position: absolute
+	bottom: 140px
+	box-shadow: inset 0 0 20px rgba(0,0,0, 0.5)
+	z-index: 2
+	@media #{$large-up}
+		bottom: 70px
+	@media #{$small-only}
+		bottom: 350px
 .footer
 	position: relative
 	.columns
@@ -424,7 +449,7 @@
 	position: relative
 	margin-top: 300px
 	top: 10px
-	z-index: 2
+	z-index: 3
 	@media #{$small-only}
 		top: 0
 	.container

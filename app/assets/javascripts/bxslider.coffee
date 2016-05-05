@@ -26,8 +26,8 @@ $(document).ready ->
         pager: false
         infiniteLoop: true
         hideControlOnEnd: true
-        speed: 1000
-        pause: 5000
+        speed: 1500
+        pause: 8000
         auto: true
         infiniteLoop: true
     $('.wine-arrow-left').click ->

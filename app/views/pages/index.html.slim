@@ -1,5 +1,7 @@
-.outer-frame
-.inner-frame
+/ #top
+/ #bottom
+/ #left
+/ #right
 .big-wrapper
 	.banner-container
 		ul.bxslider
@@ -15,7 +17,7 @@
 				p.main-title у кожній страві
 				.svg-and-lines = inline_svg "icons/grape.svg"
 			.middle-button
-				a.button href=''
+				a.button href="#form"
 					.frame
 					span = inline_svg "icons/spoon-folk-button.svg"
 					p.button-text замовити столик
@@ -61,7 +63,7 @@
 	.banner-container style="background-image: url(#{asset_path('main/banner2.jpg')})"
 		.section-text
 			p.section-title наша кухня
-			.svg-and-lines = inline_svg "icons/cheef-hat.svg"
+			.svg-and-lines = inline_svg "icons/chef-hat.svg"
 	.our-kitchen
 		.row.collapse
 			.large-10.large-centered.medium-10.medium-centered.small-12.columns
@@ -207,22 +209,46 @@
 						ul.bxslider2
 							li
 								.img-container style="background-image: url(#{asset_path('main/wine1.jpg')})"
+								.wine-type
+									p.regular вино біле сухе
+									p.subtitle-uppercased &#171;pinot grigio&#187;
+									p.regular Рік розливу: 2014
 							li
 								.img-container style="background-image: url(#{asset_path('main/wine2.jpg')})"
+								.wine-type
+									p.regular вино червоне сухе
+									p.subtitle-uppercased &#171;gridio pinot&#187;
+									p.regular Рік розливу: 2012
 							li
 								.img-container style="background-image: url(#{asset_path('main/wine3.jpg')})"
-					.wine-type-1.visible
-						p.regular вино біле сухе
-						p.subtitle-uppercased &#171;pinot grigio&#187;
-						p.regular Рік розливу: 2014
-					.wine-type-2
-						p.regular вино червоне сухе
-						p.subtitle-uppercased &#171;gridio pinot&#187;
-						p.regular Рік розливу: 2012
-					.wine-type-3
-						p.regular вино червоне напівсолодке
-						p.subtitle-uppercased &#171;gridio grigio&#187;
-						p.regular Рік розливу: 2010
+								.wine-type
+									p.regular вино червоне напівсолодке
+									p.subtitle-uppercased &#171;gridio grigio&#187;
+									p.regular Рік розливу: 2010
+							li
+								.img-container style="background-image: url(#{asset_path('main/wine4.jpg')})"
+								.wine-type
+									p.regular вино біле сухе
+									p.subtitle-uppercased &#171;pinot grigio&#187;
+									p.regular Рік розливу: 2014
+							li
+								.img-container style="background-image: url(#{asset_path('main/wine5.jpg')})"
+								.wine-type
+									p.regular вино червоне сухе
+									p.subtitle-uppercased &#171;gridio pinot&#187;
+									p.regular Рік розливу: 2012
+							li
+								.img-container style="background-image: url(#{asset_path('main/wine6.jpg')})"
+								.wine-type
+									p.regular вино червоне напівсолодке
+									p.subtitle-uppercased &#171;gridio grigio&#187;
+									p.regular Рік розливу: 2010
+							li
+								.img-container style="background-image: url(#{asset_path('main/wine7.jpg')})"
+								.wine-type
+									p.regular вино червоне напівсолодке
+									p.subtitle-uppercased &#171;gridio grigio&#187;
+									p.regular Рік розливу: 2010
 					.wine-arrow-left = inline_svg "icons/wine-arrow-left.svg"
 					.wine-arrow-right = inline_svg "icons/wine-arrow-right.svg"
 
@@ -245,7 +271,7 @@
 							p.regular Привабливий інтер’єр та доброзичлива атмосфера чекають на Вас у ресторані &#171;Винний сад&#187;. Вишуканий дизайн, приємна музика та витончений смак улюбленого вина допоможуть Вам розслабитися та насолодитися добре проведеним часом в компанії друзів або наодинці з власними думками.
 							.white-square-right
 					.large-6.medium-6.small-12.columns
-						.background-photo.right-to-left style="background-image: url(#{asset_path('main/interior3.jpg')})"
+						.background-photo.right-to-left style="background-image: url(#{asset_path('main/interior1.jpg')})"
 					.large-6.medium-6.small-12.go-right.columns.z-index
 						.text.right-to-left
 							p.subtitle-uppercased літня тераса
@@ -253,7 +279,7 @@
 							p.regular На території &#171;Винного саду&#187; Ви маєте нагоду насолодитися свіжим повітрям, сонячним теплом, прекрасним краєвидом, ласуючи кулінарними шедеврами. Затишний інтер’єр тераси у стилі прованс поєднує в собі простоту, комфорт та ексклюзивність.
 							.white-square-left
 					.large-6.medium-6.small-12.go-left.columns
-						.background-photo.left-to-right style="background-image: url(#{asset_path('main/interior4.jpg')})"
+						.background-photo.left-to-right style="background-image: url(#{asset_path('main/interior2.jpg')})"
 					.large-6.medium-6.small-12.columns.z-index
 						.text.left-to-right
 							p.subtitle-uppercased &#171;vip&#187; - дегустаційний зал
@@ -282,10 +308,10 @@
 
 
 
-	.banner-container style="background-image: url(#{asset_path('main/banner4.jpg')})"
+	.banner-container#form style="background-image: url(#{asset_path('main/banner4.jpg')})"
 		.section-text
 			p.section-title зарезервувати столик
-			.svg-and-lines = inline_svg "icons/spoon-folk-button.svg"
+			.svg-and-lines = inline_svg "icons/spoon-folk.svg"
 	.form-wrapper
 		.row.collapse
 			.large-10.large-centered.medium-10.medium-centered.small-12.columns.shadow-container
@@ -344,6 +370,7 @@
 
 
 	#googleMap
+	.shadow-for-map
 	
 
 
@@ -381,9 +408,8 @@
 						a.social-button
 							.icon = inline_svg "icons/social-utube.svg"	
 	
-
-
-
+	.inner-frame
+	.outer-frame
 
 	.footer
 		.row

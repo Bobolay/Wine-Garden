@@ -12,6 +12,7 @@
 
 #= require plugins/google-map
 
+#= require plugins/jquery.scrolldelta
 #= require scroll-banner
 
 #= require plugins/jquery-easing

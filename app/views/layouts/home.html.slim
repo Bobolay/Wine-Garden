@@ -1,14 +1,20 @@
 doctype html
 html
   head
+    title Wine Garden
+    meta name="description" content="Ресторан-винарня &#171;Винний Сад&#187; &mdash; це місце для незабутнього дозвілля, приємних зустрічей та ділового спілкування."
+    meta name="keywords" keywords="Winegarden, Винний Сад, ресторан, винарня"
     / = seo_tags
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag    "home.build", media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
-		title
-			| Wine Garden
-		meta name="description" content="Ресторан-винарня &#171;Винний Сад&#187; &mdash; це місце для незабутнього дозвілля, приємних зустрічей та ділового спілкування."
-		meta name="keywords" keywords="Winegarden, Винний Сад, ресторан, винарня"
+    link href="/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"
+    link href="/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"
+    link href="/assets/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"
+    link href="/assets/favicon/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"
+    link href="/assets/favicon/favicon-228x228.png" rel="icon" sizes="228x228" type="image/png"
+    link href="/assets/favicon/touch-icon-ipad.png" rel="apple-touch-icon-precomposed" sizes="76x76"
+    link href="/assets/favicon/touch-icon-iphone-6plus.png" rel="apple-touch-icon-precomposed" sizes="180x180"
   body
     = yield
     script src="http://maps.googleapis.com/maps/api/js"

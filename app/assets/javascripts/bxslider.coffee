@@ -26,7 +26,7 @@ $(document).ready ->
         pager: false
         infiniteLoop: true
         hideControlOnEnd: true
-        speed: 1500
+        speed: 500
         pause: 8000
         auto: true
         infiniteLoop: true

@@ -26,7 +26,7 @@ function initialize() {
         zoomZoom = 16;
     } else {
         xCordinate = 22.717288,17;
-        zoomZoom = 16;
+        zoomZoom = 15;
     }
 
     var mapOptions = {
@@ -35,10 +35,10 @@ function initialize() {
         panControl:false,
         zoomControl:false,
         mapTypeControl:false,
-        scaleControl:false,
+        // scaleControl:false,
         streetViewControl:false,
         overviewMapControl:false,
-        rotateControl:false,
+        // rotateControl:false,
         draggable: isDraggable,
         scrollwheel: false,
         mapTypeControlOptions:{

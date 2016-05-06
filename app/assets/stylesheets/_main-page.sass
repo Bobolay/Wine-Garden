@@ -55,6 +55,8 @@
 			top: 90%
 			cursor: pointer
 			min-width: 200px
+			@media #{$small-only}
+				top: 80%
 			.arrow-down-inside
 				+x-align
 				top: 25px
@@ -162,7 +164,7 @@
 		.regular
 			color: $light-grey
 		.line-right
-			width: 103%
+			// width: 103%
 		.line-left
 			left: -3%
 			@media #{$small-only}
@@ -197,6 +199,9 @@
 				height: 200px
 				top: initial
 				margin-top: 10px
+		.inner-text-left
+			position: relative
+			z-index: 2
 		.inner-text-right
 			position: relative
 			width: 80%

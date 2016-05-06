@@ -91,11 +91,44 @@
 			opacity: 1
 //                               D I S H     T E X T
 
+.inner-text-left
+	opacity: 0
+	+translate(-25%,0)
+	+transition(0.5s)
+	&.appeared
+		opacity: 1
+		+translate(0,0)
+	@media #{$small-only}
+		opacity: 1
+		+translate(0,0)
+.line-right
+	width: 0
+	+transition-delay(0.5s)
+	+transition(0.5s)
+	&.appeared
+		width: 105%
+	@media #{$small-only}
+		width: 105%
+
+.photo-right
+	opacity: 0
+	+translate(25%,0)
+	+transition(0.5s)
+	&.appeared
+		opacity: 1
+		+translate(0,0)
+	@media #{$small-only}
+		opacity: 1
+		+translate(0,0)
+
+
+
+
 .inner-text-right
 	opacity: 0
-	+translate(50%,0)
+	+translate(25%,0)
 	+transition-delay(1s)
-	+transition(1.5s)
+	+transition(0.5s)
 	&.appeared
 		opacity: 1
 		+translate(0,0)
@@ -110,6 +143,18 @@
 		width: 103%
 	@media #{$small-only}
 		width: 103%
+
+.photo-left
+	opacity: 0
+	+transition-delay(1s)
+	+translate(-25%,0)
+	+transition(0.5s)
+	&.appeared
+		opacity: 1
+		+translate(0,0)
+	@media #{$small-only}
+		opacity: 1
+		+translate(0,0)
 
 //                 I N T E R I O R     A N D     E X T E R I O R
 

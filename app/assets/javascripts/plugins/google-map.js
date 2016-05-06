@@ -35,23 +35,24 @@ function initialize() {
         panControl:false,
         zoomControl:false,
         mapTypeControl:false,
-        // scaleControl:false,
+        scaleControl:false,
         streetViewControl:false,
         overviewMapControl:false,
-        // rotateControl:false,
-        draggable: isDraggable,
-        scrollwheel: false,
+        rotateControl:true,
+        // draggable: isDraggable,
+        draggable: true,
+        scrollwheel: true,
         mapTypeControlOptions:{
             mapTypeIds: [google.maps.MapTypeId.ROADMAP, "map_style"]
         }
     };
     var map = new google.maps.Map(document.getElementById('googleMap'),
         mapOptions);
-    var image = '/assets/icons/geolocation-logo.svg'
+    var image = '/assets/icons/gps-pin.svg'
     var marker = new google.maps.Marker({
         map: map,
         draggable: true,
-        position: new google.maps.LatLng(48.9282849, 23.9097038),
+        position: new google.maps.LatLng(48.4623972, 22.717288,17),
         icon: image
     });
     map.mapTypes.set('map_style', styledMap);

@@ -149,22 +149,60 @@ $grey: #606060
 	border: 1px solid #fff
 	opacity: 0.5
 
-.bottom-frame-1
+.bottom
 	position: absolute
-	top: -5px
+	bottom: 30px
+	right: 30px
+	left: 30px
+	height: 1px
+	background: $wine
+	opacity: 0.5
+	&:before
+		position: absolute
+		content: ''
+		width: calc(100% - 10px)
+		top: -5px
+		left: 5px
+		height: 1px
+		background: $wine
+.left
+	position: absolute
+	left: 30px
+	bottom: 30px
+	top: -600px
+	width: 1px
+	background: $wine
+	opacity: 0.5
+	height: 570px
+	@media #{$small-only}
+		display: none
+	&:before
+		position: absolute
+		content: ''
+		height: calc(100% - 5px)
+		left: 5px
+		bottom: 5px
+		width: 1px
+		background: $wine
+.right
+	position: absolute
 	right: 30px
 	bottom: 30px
-	left: 30px
-	border: 1px solid $wine
+	top: -600px
+	width: 1px
+	background: $wine
 	opacity: 0.5
-.bottom-frame-2
-	position: absolute
-	top: -5px
-	right: 35px
-	bottom: 35px
-	left: 35px
-	border: 1px solid $wine
-	opacity: 0.5
+	height: 570px
+	@media #{$small-only}
+		display: none
+	&:before
+		position: absolute
+		content: ''
+		height: calc(100% - 5px)
+		right: 5px
+		bottom: 5px
+		width: 1px
+		background: $wine
 
 .side-frame-1
 	position: absolute

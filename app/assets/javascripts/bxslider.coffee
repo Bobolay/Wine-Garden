@@ -2,7 +2,7 @@ change_slide = (index)->
 
 $("body").on "click", ".squares a", ()->
     $button = (this)
-    index = $button.index()
+    index = $button.index
     change_slide()
 
 $(document).ready ->

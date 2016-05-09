@@ -20,3 +20,5 @@
 #= require appear-initialize
 
 #= require plugins/parallax.min
+
+#= require main

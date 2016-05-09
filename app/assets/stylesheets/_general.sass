@@ -327,16 +327,46 @@ $grey: #606060
 	&:before, &:after
 		content: ''
 		position: absolute
-		width: 100px
+		width: 0px
 		height: 2px
 		background-color: #fff
 		top: 50%
-		+transition(1s)
+		+transition(0.5s)
 		@media #{$small-only}
 			height: 1px
-	// &.appeared
-	// 	&:before, &:after
-	// 		width: 100px
+	&.appeared
+		&:before, &:after
+			width: 100px
+	&:before
+		right: 40px
+	&:after
+		left: 40px
+	@media #{$small-only}
+		width: 25px
+		height: 25px
+		&:before, &:after
+			width: 70px
+
+.svg-and-lines-on-banner
+	position: relative
+	fill: #fff
+	width: 30px
+	height: 30px
+	display: block
+	margin: 0 auto
+	&:before, &:after
+		content: ''
+		position: absolute
+		width: 0px
+		height: 2px
+		background-color: #fff
+		top: 50%
+		+transition(0.5s)
+		@media #{$small-only}
+			height: 1px
+	&.appeared
+		&:before, &:after
+			width: 100px
 	&:before
 		right: 40px
 	&:after

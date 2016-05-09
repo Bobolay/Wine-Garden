@@ -11,6 +11,8 @@
 	overflow: hidden
 	&:first-child
 		height: 100vh
+		@media only screen and (max-width: 640px) and (orientation: landscape)
+			height: 800px
 		&:before
 			content: ''
 			position: absolute

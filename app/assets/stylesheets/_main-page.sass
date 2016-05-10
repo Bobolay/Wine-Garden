@@ -95,6 +95,8 @@
 		background: #fff
 	.text, .text-middle
 		padding: 30px
+		@media #{$small-only}
+			padding: 10px
 	.text-middle
 		text-align: center
 		.regular
@@ -208,8 +210,8 @@
 			z-index: 2
 		.inner-text-right
 			position: relative
-			width: 80%
-			left: 20%
+			width: 75%
+			left: 25%
 			.description
 				width: 100%
 .wine-cellar
@@ -417,10 +419,10 @@
 	.radio-boxes
 		input
 			display: none
-		.option
+			
 		input:not(:checked) 
 			& ~ .square-reserve
-
+		
 		input:checked 
 			& ~ .option
 			& ~ label 

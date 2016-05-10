@@ -1,4 +1,4 @@
-if(is_touch_screen || width < 640) {
+if(is_touch_screen && width < 640) {
     console.log("it works")
 } else {
 	$(function() {

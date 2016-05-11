@@ -1,7 +1,11 @@
 class FormsController < ApplicationController
   def order_request
     order_request_params = params[:order_request] || {}
-    order_request_params[:date_time] = DateTime.parse(order_request_params["date"] + " " + order_request_params["time"])
+    begin
+      order_request_params[:date_time] = DateTime.parse(order_request_params["date"] + " " + order_request_params["time"])
+    rescue
+      order_request_params[:date_time] = nil
+    end
     order_request = OrderRequest.new(order_request_params)
     order_request.referer = request.referer
     order_request.session_id = session.id

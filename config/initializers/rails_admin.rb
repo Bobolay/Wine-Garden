@@ -44,7 +44,7 @@ RailsAdmin.config do |config|
     field :seo_tags
   end
 
-  config.model FormConfigs do
+  config.model OrderRequest do
     field :persons_quantity
     field :name
     field :phone
@@ -53,5 +53,12 @@ RailsAdmin.config do |config|
     field :created_at
     field :referer
     field :session_id
+  end
+
+  config.model FormConfigs::OrderRequest do
+    field :email_receivers do
+      label "Отримувачі"
+      help "Кожен емейл з нового рядка"
+    end
   end
 end

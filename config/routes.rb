@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+                 sessions: "users/sessions"
+                   }
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: "pages#index"
-
-  # controller :pages do
-  #   get "about-us", action: "about_us"
-  #   # get "contact-us", action: "contact_us"
-  # end
-
-  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # mount Ckeditor::Engine => '/ckeditor'
-  #devise_for :users
+  post "/order-request", as: "order_request", to: "forms#order_request"
 
 
-  match "*url", to: "application#render_not_found", via: [:get, :post, :path, :put, :update, :delete]
+  match "*url", to: redirect("/"), via: [:get, :post, :path, :put, :update, :delete]
 end

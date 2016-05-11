@@ -1,0 +1,52 @@
+.form-wrapper#form
+  .row.collapse
+    .large-10.large-centered.medium-10.medium-centered.small-12.columns.shadow-container
+      .form-container
+        p.subtitle-uppercased форма резервації столика
+        form action=order_request_path method="post"
+          p.georgia На яку кількість персон резервуємо?
+          .radio-boxes
+            - %w(2 4 6 8+).each_with_index do |v, i|
+              - input_id = "quantity_#{i+1}"
+              label.option for=input_id
+                input id=input_id type="radio" name="order_request[persons_quantity]" value=v
+                label for=input_id
+                  label.text for=input_id
+                    = v
+                  label.rect for=input_id
+            .line
+          .row
+            .large-6.medium-6.small-12.columns
+              .input
+                input type="text" name="order_request[name]"
+                  span.bar
+                label
+                  | На кого резервуємо?:
+                  span &lowast;
+              .input
+                input type="text" name="order_request[phone]"
+                  span.bar
+                label
+                  | Телефон:
+                  span &lowast;
+              .date-time-container
+                .input.group-left
+                  input type="text" name="order_request[date]"
+                    .icon = inline_svg "icons/form-date.svg"
+                    span.bar
+                  label
+                    | Дата:
+                    span &lowast;
+                .input.group-right
+                  input type="text" name="order_request[time]"
+                    .icon = inline_svg "icons/form-time.svg"
+                    span.bar
+                  label Час: &lowast;
+            .large-6.medium-6.small-12.columns
+              .input
+                textarea rows="7" name="order_request[message]"
+                p.above-text-area Особливі побажання
+          button.button type="submit"
+            .frame
+            span = inline_svg "icons/spoon-folk-button.svg"
+            p.button-text замовити столик

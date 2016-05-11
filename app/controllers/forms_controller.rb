@@ -2,7 +2,7 @@ class FormsController < ApplicationController
   def order_request
     order_request_params = params[:order_request] || {}
     begin
-      order_request_params[:date_time] = DateTime.parse(order_request_params["date"] + " " + order_request_params["time"])
+      order_request_params[:date_time] = DateTime.parse(order_request_params.delete(:date) + " " + order_request_params.delete(:time))
     rescue
       order_request_params[:date_time] = nil
     end

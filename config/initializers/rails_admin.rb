@@ -36,7 +36,7 @@ RailsAdmin.config do |config|
   end
 
   config.included_models = []
-  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest
+  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest, User
 
   Cms.configure_rails_admin(config)
 
@@ -60,5 +60,11 @@ RailsAdmin.config do |config|
       label "Отримувачі"
       help "Кожен емейл з нового рядка"
     end
+  end
+
+  config.model User do 
+    field :email
+    field :password
+    field :password_confirmation
   end
 end

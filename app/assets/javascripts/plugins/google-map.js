@@ -22,16 +22,16 @@ function initialize() {
     var isDraggable = w > 640 ? true : false;
     var xCordinate, zoomZoom = null;
     if (w > 640){
-        xCordinate = 22.717288,17;
-        zoomZoom = 16;
+        xCordinate = 22.710022;
+        zoomZoom = 15;
     } else {
-        xCordinate = 22.717288,17;
-        zoomZoom = 16;
+        xCordinate = 22.710022;
+        zoomZoom = 15;
     }
 
     var mapOptions = {
         zoom: zoomZoom,
-        center: new google.maps.LatLng(48.4611972, xCordinate),
+        center: new google.maps.LatLng(48.463401, xCordinate),
         panControl:false,
         zoomControl:false,
         mapTypeControl:false,
@@ -51,8 +51,8 @@ function initialize() {
     var image = '/assets/icons/gps-pin.svg'
     var marker = new google.maps.Marker({
         map: map,
-        draggable: true,
-        position: new google.maps.LatLng(48.4623972, 22.717288,17),
+        draggable: false,
+        position: new google.maps.LatLng(48.466401, 22.710022),
         icon: image
     });
     map.mapTypes.set('map_style', styledMap);

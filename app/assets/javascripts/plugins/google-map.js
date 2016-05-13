@@ -54,7 +54,7 @@ function initialize() {
         draggable: false,
         position: new google.maps.LatLng(48.466401, 22.710022),
         icon: image
-    });
+    }); 
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
 }

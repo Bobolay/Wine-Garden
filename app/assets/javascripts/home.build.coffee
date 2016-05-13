@@ -7,7 +7,7 @@
 
 #= require plugins/jquery.bxslider
 #= require bxslider
-
+#= require forms
 #= require form
 
 #= require plugins/google-map

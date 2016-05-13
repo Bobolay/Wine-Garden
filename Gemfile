@@ -55,6 +55,7 @@ gem 'rails_admin'
 gem 'rails_admin_nestable'
 
 gem 'devise'
+gem 'devise-i18n'
 
 gem 'enumerize'
 
@@ -92,3 +93,5 @@ gem 'cms', github: "pkorenev/cms"
 gem 'require_reloader'
 
 gem 'thin'
+
+#gem 'i18n-active_record', :require => 'i18n/active_record'

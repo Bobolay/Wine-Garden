@@ -31,7 +31,7 @@
                   span &lowast;
               .date-time-container
                 .input.group-left
-                  input type="text" name="order_request[date]"
+                  input#datepicker type="text" name="order_request[date]"
                     .icon = inline_svg "icons/form-date.svg"
                     span.bar
                   label
@@ -50,3 +50,11 @@
             .frame
             span = inline_svg "icons/spoon-folk-button.svg"
             p.button-text замовити столик
+        .popup
+          .text-wrapper
+            .text-container 
+              .form-accept-svg = inline_svg "icons/form-accept.svg"
+              p.text
+                | ви успішно
+                br
+                | замовили столик

@@ -54,6 +54,8 @@ $grey: #606060
 	text-transform: uppercase
 	@media #{$small-only}
 		font-size: 1em
+	@media #{$xlarge-up}
+		font-size: 1.75em
 .main-title
 	font-size: 2.375em
 	color: $wine
@@ -62,6 +64,8 @@ $grey: #606060
 	text-shadow: 0 0 25px rgba(255, 255, 255, 0.35)
 	@media #{$small-only}
 		font-size: 1.7em
+	@media #{$xlarge-up}
+		font-size: 2.75em
 .regular
 	font-size: 0.875em
 	color: $grey
@@ -161,6 +165,7 @@ $grey: #606060
 	height: 1px
 	background: $wine
 	opacity: 0.5
+	z-index: 6
 	&:before
 		position: absolute
 		content: ''
@@ -178,6 +183,7 @@ $grey: #606060
 	background: $wine
 	opacity: 0.5
 	height: 570px
+	z-index: 6
 	@media #{$small-only}
 		display: none
 	&:before
@@ -197,6 +203,7 @@ $grey: #606060
 	background: $wine
 	opacity: 0.5
 	height: 570px
+	z-index: 6
 	@media #{$small-only}
 		display: none
 	&:before
@@ -236,6 +243,8 @@ $grey: #606060
 
 .shadow-container
 	box-shadow: 0 0 20px 0 rgba(96,96,96, 0.7)
+	position: relative
+	z-index: 7
 .desktop
 	display: none
 	@media #{$medium-up}

@@ -25,19 +25,31 @@ $("body").on "click", ".input label:not([for])", ()->
 
 
 $("form").on "submit", (e)->
+  all_present = true
   e.preventDefault()
-  $(".popup").addClass("animate-popup")
-  setTimeout (->
-    $(".popup").removeClass("animate-popup")
-  ), 3000
+  $(this).find('.required').each ()->
+    val = $(this).val()
+    if !val || val.length == 0
+      all_present = false
+  if all_present == false
+    $('.error').addClass('show-error')
+    setTimeout (->
+      $(".error").removeClass('show-error')
+    ), 2000
+  else
+    
+    $(".popup").addClass("animate-popup")
+    setTimeout (->
+      $(".popup").removeClass("animate-popup")
+    ), 3000
 
-  $form = $(this)
-  data_str = $form.serialize()
-  method = $form.attr("method")
-  url = $form.attr("action")
-  $.ajax({
-    url: url
-    type: "post"
-    data: data_str
-  })
+    $form = $(this)
+    data_str = $form.serialize()
+    method = $form.attr("method")
+    url = $form.attr("action")
+    $.ajax({
+      url: url
+      type: "post"
+      data: data_str
+    })
 

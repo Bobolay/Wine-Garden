@@ -18,14 +18,16 @@
           .row
             .large-6.medium-6.small-12.columns
               .input
-                input type="text" name="order_request[name]"
+                input.required type="text" name="order_request[name]"
                   span.bar
+                  .error Заповніть необхідні поля
                 label
                   | На кого резервуємо?:
                   span &lowast;
               .input
-                input type="text" name="order_request[phone]"
+                input.required type="text" name="order_request[phone]"
                   span.bar
+                  .error Заповніть необхідні поля
                 label
                   | Телефон:
                   span &lowast;

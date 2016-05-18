@@ -24,3 +24,6 @@
 #= require main
 
 #= require datepick
+
+# require plugins/jquery.validate.min
+# require validate

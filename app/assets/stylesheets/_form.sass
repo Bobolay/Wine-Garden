@@ -76,3 +76,12 @@ form
 			width: 50%
 	.button
 		margin: 40px auto 0
+
+	.error
+		position: absolute
+		font-size: 0.75em
+		color: red
+		opacity: 0
+		+transition(0.25s)
+		&.show-error
+			opacity: 1

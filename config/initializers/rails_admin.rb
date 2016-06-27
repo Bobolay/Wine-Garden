@@ -33,10 +33,14 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+
+    nestable do
+      only [Dish]
+    end
   end
 
   config.included_models = []
-  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest
+  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest, Dish, InteriorComponent
 
   Cms.configure_rails_admin(config)
 
@@ -61,4 +65,29 @@ RailsAdmin.config do |config|
       help "Кожен емейл з нового рядка"
     end
   end
+
+  config.model Dish do
+    nestable_list({position_field: :sorting_position})
+
+    edit do
+      field :name
+      field :label
+      field :image
+      field :description
+      field :price
+      field :weight
+    end
+  end
+
+  config.model InteriorComponent do
+    nestable_list({position_field: :sorting_position})
+
+    edit do
+      field :name
+      field :label
+      field :image
+      field :description
+    end
+  end
+
 end

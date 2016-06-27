@@ -92,93 +92,48 @@
 	.our-dishes
 		.row.collapse
 			.large-12.medium-12.small-12.columns
-				.inner-container
-					.dish-frame
-						.left-border
-						.right-border
-					.row
-						.large-6.medium-6.small-12.columns
-							.inner-text-left
-								p.subtitle-uppercased салат &#171;цезар&#187;
-								p.regular Хіт сезону
-								.line-right
-									.price-right
-										.text &#8372;110
-								p.description Ніжна куриця, свіже листя салату та апетитний сир під класичним соусом подарують Вам ні з чим незрівнянний смак улюбленого салату.
-								p.georgia
-									| 215 
-									span г
-						.large-6.medium-6.small-12.columns
-							.background-photo.photo-right style="background-image: url(#{asset_path('main/dish1.jpg')})"
-				.inner-container
-					.row						
-						.large-6.medium-6.small-12.columns.go-right
-							.inner-text-right
-								p.subtitle-uppercased паста з лососем
-								p.regular Пропозиція тижня
-							.line-left
-								.price-left
-									.text &#8372;120
-							.inner-text-right
-								p.description.appear Справжня італійська паста з ніжним смаком лосося – спробуйте незвичайне поєднання звичних продуктів та відчуйте неймовірний смак цієї дивовижної страви.
-								p.georgia
-									| 300 
-									span г
-						.large-6.medium-6.small-12.columns.go-left
-							.background-photo.photo-left style="background-image: url(#{asset_path('main/dish2.jpg')})"
-				.inner-container
-					.dish-frame
-						.left-border
-						.right-border
-					.row
-						.large-6.medium-6.small-12.columns
-							.inner-text-left
-								p.subtitle-uppercased форель
-								p.regular Страва від шефа
-								.line-right
-									.price-right
-										.text &#8372;40
-								p.description Соковита королівська рибка, яка тане в роті. Смачно, корисно і вишукано! Чудовим доповненням до страви стане біле вино.
-								p.georgia
-									| 100 
-									span г
-						.large-6.medium-6.small-12.columns
-							.background-photo.photo-right style="background-image: url(#{asset_path('main/dish3.jpg')})"
-				.inner-container
-					.row						
-						.large-6.medium-6.small-12.columns.go-right
-							.inner-text-right
-								p.subtitle-uppercased плов
-								p.regular Краща пропозиція
-							.line-left
-								.price-left
-									.text &#8372;55
-							.inner-text-right
-								p.description Соковите м’ясо, розсипчастий рис, свіжа морква та неймовірні аромати спецій – ось він, ідеальний плов!
-								p.georgia
-									| 260 
-									span г
-						.large-6.medium-6.small-12.columns.go-left
-							.background-photo.photo-left style="background-image: url(#{asset_path('main/dish4.jpg')})"
-				.inner-container
-					.dish-frame
-						.left-border
-						.right-border
-					.row
-						.large-6.medium-6.small-12.columns
-							.inner-text-left
-								p.subtitle-uppercased гарбузовий крем-суп
-								p.regular Страва від шефа
-								.line-right
-									.price-right
-										.text &#8372;55
-								p.description Ніжна консистенція, дивовижний аромат та м’який смак поживного супу придадуть енергії та здоров’я Вам та Вашій родині!
-								p.georgia
-									| 250 
-									span г
-						.large-6.medium-6.small-12.columns
-							.background-photo.photo-right style="background-image: url(#{asset_path('main/dish5.jpg')})"
+                - @dishes.each_with_index do |item, index|
+                  - odd = index % 2 == 1
+                  - even = !odd
 
+
+                  - if even
+                    .inner-container
+                      - if even
+                        .dish-frame
+                          .left-border
+                          .right-border
+                      .row
+                        .large-6.medium-6.small-12.columns
+                          .inner-text-left
+                            p.subtitle-uppercased = raw item.name
+                            p.regular = raw item.label
+                            .line-right
+                              .price-right
+                                .text &#8372;#{item.price}
+                            p.description = raw item.description
+                            p.georgia
+                              = raw item.weight
+                              span г
+                        .large-6.medium-6.small-12.columns
+                          .background-photo.photo-right style="background-image: url(#{item.image.url(:large)})"
+                  - else
+                    .inner-container
+                      .row
+                        .large-6.medium-6.small-12.columns.go-right
+                          .inner-text-right
+                            p.subtitle-uppercased = raw item.name
+                            p.regular = raw item.label
+                          .line-left
+                            .price-left
+                              .text &#8372;#{item.price}
+                          .inner-text-right
+                            p.description.appear Справжня італійська паста з ніжним смаком лосося – спробуйте незвичайне поєднання звичних продуктів та відчуйте неймовірний смак цієї дивовижної страви.
+                            p.georgia
+                              | #{item.weight}
+                              span г
+                        .large-6.medium-6.small-12.columns.go-left
+                          .background-photo.photo-left style="background-image: url(#{item.image.url(:large)})"
 
 
 
@@ -268,45 +223,18 @@
 		.row.collapse
 			.large-12.medium-12.small-12.columns.shadow-container
 				.row.collapse
-					.large-6.medium-6.small-12.columns.z-index
-						.text.left-to-right
-							p.subtitle-uppercased головний зал
-							p.person-numbers 60 персон
-							p.regular Привабливий інтер’єр та доброзичлива атмосфера чекають на Вас у ресторані &#171;Винний сад&#187;. Вишуканий дизайн, приємна музика та витончений смак улюбленого вина допоможуть Вам розслабитися та насолодитися добре проведеним часом в компанії друзів або наодинці з власними думками.
-							.white-square-right
-					.large-6.medium-6.small-12.columns
-						.background-photo.right-to-left style="background-image: url(#{asset_path('main/interior1.jpg')})"
-					.large-6.medium-6.small-12.go-right.columns.z-index
-						.text.right-to-left
-							p.subtitle-uppercased літня тераса
-							p.person-numbers 30 персон
-							p.regular На території &#171;Винного саду&#187; Ви маєте нагоду насолодитися свіжим повітрям, сонячним теплом, прекрасним краєвидом, ласуючи кулінарними шедеврами. Затишний інтер’єр тераси у стилі прованс поєднує в собі простоту, комфорт та ексклюзивність.
-							.white-square-left
-					.large-6.medium-6.small-12.go-left.columns
-						.background-photo.left-to-right style="background-image: url(#{asset_path('main/interior2.jpg')})"
-					.large-6.medium-6.small-12.columns.z-index
-						.text.left-to-right
-							p.subtitle-uppercased &#171;vip&#187; &mdash; дегустаційний зал
-							p.person-numbers 12 персон
-							p.regular Винарня &#171;Винний сад&#187; має власні дегустаційні зали, які інтригують своєю атмосферою і тішать шанувальників блискучою колекцією вин. Гості закладу мають змогу побувати на особливій дегустації в унікальній VIP-залі, яка вражає своєю неповторністю та розрахована на 12 осіб.
-							.white-square-right
-					.large-6.medium-6.small-12.columns
-						.background-photo.right-to-left style="background-image: url(#{asset_path('main/interior3.jpg')})"
-					.large-6.medium-6.small-12.go-right.columns.z-index
-						.text.right-to-left
-							p.subtitle-uppercased &#171;комфорт&#187; - дегустаційний зал
-							p.person-numbers 50 персон
-							p.regular Також є можливість проводити групові дегустації в комфортній залі, яка розміщена в старовинних печерах та може вмістити до 50 осіб одночасно. Неперевершена колекція вин. Вина власного виробництва. Казковий інтер’єр. Все це подарує Вам справжнє задоволення.
-							.white-square-left
-					.large-6.medium-6.small-12.go-left.columns
-						.background-photo.left-to-right style="background-image: url(#{asset_path('main/interior4.jpg')})"
-					.large-6.medium-6.small-12.columns.z-index
-						.text.left-to-right
-							p.subtitle-uppercased дитячий майданчик
-							p.regular Запрошуємо наших маленьких гостей у цікаве та захоплююче місце для ігор та розваг. Професійні аніматори подбають про те, щоб Ваші діти отримали задоволення та яскраві емоції від розважальних програм та розвиваючих ігор. Перемістіться в захопливий світ пригод та фантазій разом з &#171;Винним садом&#187;.
-							.white-square-right
-					.large-6.medium-6.small-12.columns
-						.background-photo.right-to-left style="background-image: url(#{asset_path('main/interior5.jpg')})"
+                    - @interior_components.each_with_index do |item, index|
+                        - odd = index % 2 == 1
+                        - even = !odd
+                        .large-6.medium-6.small-12.columns.z-index class="#{'go-left' if even} #{'go-right' if odd}"
+                            .text class="#{'left-to-right' if even} #{'right-to-left' if odd}"
+                                p.subtitle-uppercased = raw item.name
+                                - if item.label.present?
+                                    p.person-numbers = raw item.label
+                                p.regular = item.description
+                                div class="#{'white-square-right' if even} #{'white-square-left' if odd}"
+                        .large-6.medium-6.small-12.columns
+                            .background-photo style="background-image: url(#{item.image.url(:large)})" class="#{'left-to-right' if even} #{'right-to-left' if odd}"
 
 
 

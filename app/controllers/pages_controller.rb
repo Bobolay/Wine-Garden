@@ -5,6 +5,9 @@ class PagesController < ApplicationController
 
   def index
      set_page_metadata(:home)
+
+      @dishes = Dish.published.sort_by_sorting_position
+      @interior_components = InteriorComponent.published.sort_by_sorting_position
   end
 
   private

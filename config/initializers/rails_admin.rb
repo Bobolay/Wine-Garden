@@ -40,11 +40,9 @@ RailsAdmin.config do |config|
   end
 
   config.included_models = []
-<<<<<<< HEAD
+
   config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest, Dish, InteriorComponent
-=======
-  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest, User
->>>>>>> 13f2c1bfffb2d3627a6afca0898b9595a2874509
+
 
   Cms.configure_rails_admin(config)
 

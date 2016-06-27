@@ -26,7 +26,7 @@ if(is_touch_screen || width < 640) {
                 {scrollTop: top},
                 {
                     duration: 1000,
-                    easing: "easeInCubic",
+                    easing: "easeInOutQuad",
                     //specialEasing: "easeInOutElastic"
                     complete: function(){
                         $body.data("scroll_in_progress", false)

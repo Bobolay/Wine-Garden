@@ -51,7 +51,7 @@ form
 			span
 				position: relative
 				top: -5px
-		input:focus ~ label, input.used ~ label, textarea:focus ~ label, textarea.used ~ label
+		input:focus ~ label, &.not-empty label
 			top: -25px
 			font-size: 0.875em
 			color: $light-grey
@@ -76,3 +76,12 @@ form
 			width: 50%
 	.button
 		margin: 40px auto 0
+
+	.error
+		position: absolute
+		font-size: 0.75em
+		color: red
+		opacity: 0
+		+transition(0.25s)
+		&.show-error
+			opacity: 1

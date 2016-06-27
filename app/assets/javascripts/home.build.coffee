@@ -1,4 +1,5 @@
 #= require jquery
+#= require jquery-ui
 
 #= require jquery_ujs
 
@@ -8,7 +9,6 @@
 #= require plugins/jquery.bxslider
 #= require bxslider
 #= require forms
-#= require form
 
 #= require plugins/google-map
 
@@ -22,3 +22,8 @@
 #= require plugins/parallax.min
 
 #= require main
+
+#= require datepick
+
+# require plugins/jquery.validate.min
+# require validate

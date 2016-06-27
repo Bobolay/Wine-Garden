@@ -18,20 +18,22 @@
           .row
             .large-6.medium-6.small-12.columns
               .input
-                input type="text" name="order_request[name]"
+                input.required type="text" name="order_request[name]"
                   span.bar
+                  .error Заповніть необхідні поля
                 label
                   | На кого резервуємо?:
                   span &lowast;
               .input
-                input type="text" name="order_request[phone]"
+                input.required type="text" name="order_request[phone]"
                   span.bar
+                  .error Заповніть необхідні поля
                 label
                   | Телефон:
                   span &lowast;
               .date-time-container
                 .input.group-left
-                  input type="text" name="order_request[date]"
+                  input#datepicker type="text" name="order_request[date]"
                     .icon = inline_svg "icons/form-date.svg"
                     span.bar
                   label
@@ -50,3 +52,11 @@
             .frame
             span = inline_svg "icons/spoon-folk-button.svg"
             p.button-text замовити столик
+        .popup
+          .text-wrapper
+            .text-container 
+              .form-accept-svg = inline_svg "icons/form-accept.svg"
+              p.text
+                | ви успішно
+                br
+                | замовили столик

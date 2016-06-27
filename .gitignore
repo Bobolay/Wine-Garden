@@ -18,3 +18,7 @@
 
 /config/initializers/smtp_settings.rb
 /.idea
+/Gemfile.lock
+/db/schema.rb
+/public/*
+!/public/.keep

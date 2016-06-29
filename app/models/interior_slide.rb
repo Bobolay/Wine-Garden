@@ -4,7 +4,7 @@ class InteriorSlide < ActiveRecord::Base
   scope :published, -> { where(published: 't') }
   scope :sort_by_sorting_position, -> { order("sorting_position asc") }
 
-  has_attached_file :image, styles: { large: "550x363#" }
+  has_attached_file :image, styles: { large: "1280x1280#" }
 
   [:image].each do |attachment_name|
     attr_accessible attachment_name

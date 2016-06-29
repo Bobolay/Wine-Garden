@@ -5,7 +5,7 @@ class CreateProductSlides < ActiveRecord::Migration
       t.integer :sorting_position
       t.attachment :image
       t.string :name
-      t.string :model_name
+      t.string :product_model_name
       t.integer :year
 
       t.timestamps null: false

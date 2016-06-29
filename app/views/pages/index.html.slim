@@ -3,9 +3,8 @@
 
 	.banner-container.main-banner
 		ul.bxslider
-			.img-container style="background-image: url(#{asset_path('main/banner-1.jpg')})"
-			.img-container style="background-image: url(#{asset_path('main/banner-2.jpg')})"
-			.img-container style="background-image: url(#{asset_path('main/banner-3.jpg')})"
+            - @main_slides.each do |slide|
+                .img-container style="background-image: url(#{slide.image.url(:large)})"
 		.inner-container
 			.top
 				.logo = inline_svg "logo/logo.svg"
@@ -151,62 +150,26 @@
 				.square
 					.slider-container
 						ul.bxslider
-							li
-								.img-container style="background-image: url(#{asset_path('main/ristorante1.jpg')})"
-							li
-								.img-container style="background-image: url(#{asset_path('main/ristorante2.jpg')})"
-							li
-								.img-container style="background-image: url(#{asset_path('main/ristorante3.jpg')})"
-						.squares#bx-pager
-							a data-slide-index="0" href=""
-							a data-slide-index="1" href=""
-							a data-slide-index="2" href=""
+                            - @interior_slides.each do |slide|
+                                li
+                                    .img-container style="background-image: url(#{slide.image.url(:large)})"
+
+                        .squares#bx-pager
+                            - @interior_slides.each_with_index do |slide, index|
+                                a data-slide-index=index href=""
+
 			.large-6.medium-6.small-12.columns
 				.square
 					.slider-container2
 						ul.bxslider2
-							li
-								.img-container style="background-image: url(#{asset_path('main/wine1.jpg')})"
-								.wine-type
-									p.regular червоне сухе
-									p.subtitle-uppercased &#171;valpolicella&#187; (італія)
-									p.regular Рік розливу: 2012
-							li
-								.img-container style="background-image: url(#{asset_path('main/wine2.jpg')})"
-								.wine-type
-									p.regular червоне сухе
-									p.subtitle-uppercased &#171;cabernet sauvignon&#187; (франція)
-									p.regular Рік розливу: 2012
-							li
-								.img-container style="background-image: url(#{asset_path('main/wine3.jpg')})"
-								.wine-type
-									p.regular біле сухе
-									p.subtitle-uppercased &#171;lozano&#187; (іспанія)
-									p.regular Рік розливу: 2015
-							li
-								.img-container style="background-image: url(#{asset_path('main/wine4.jpg')})"
-								.wine-type
-									p.regular біле сухе
-									p.subtitle-uppercased &#171;pinot grigio&#187; (італія)
-									p.regular Рік розливу: 2014
-							li
-								.img-container style="background-image: url(#{asset_path('main/wine5.jpg')})"
-								.wine-type
-									p.regular біле сухе
-									p.subtitle-uppercased &#171;sauvignon blanc&#187; (чилі)
-									p.regular Рік розливу: 2014
-							li
-								.img-container style="background-image: url(#{asset_path('main/wine6.jpg')})"
-								.wine-type
-									p.regular біле десертне марочне
-									p.subtitle-uppercased &#171;троянда карпат&#187; (україна)
-									p.regular Рік розливу: 2015
-							li
-								.img-container style="background-image: url(#{asset_path('main/wine7.jpg')})"
-								.wine-type
-									p.regular червоне напівсолодке
-									p.subtitle-uppercased &#171;alazani valley&#187; (грузія)
-									p.regular Рік розливу: 2010
+                            - @product_slides.each do |slide|
+                                li
+                                    .img-container style="background-image: url(#{slide.image.url(:large)})"
+                                    .wine-type
+                                        p.regular = slide.name
+                                        p.subtitle-uppercased = raw slide.product_model_name
+                                        p.regular Рік розливу: #{slide.year}
+
 					.wine-arrow-left = inline_svg "icons/wine-arrow-left.svg"
 					.wine-arrow-right = inline_svg "icons/wine-arrow-right.svg"
 

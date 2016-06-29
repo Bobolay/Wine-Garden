@@ -35,13 +35,13 @@ RailsAdmin.config do |config|
     # history_show
 
     nestable do
-      only [Dish]
+      only [Dish, InteriorComponent, ProductSlide, InteriorSlide]
     end
   end
 
   config.included_models = []
 
-  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest, Dish, InteriorComponent
+  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest, Dish, InteriorComponent, ProductSlide, InteriorSlide
 
 
   Cms.configure_rails_admin(config)
@@ -92,9 +92,29 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model User do 
+  config.model User do
     field :email
     field :password
     field :password_confirmation
+  end
+
+  config.model ProductSlide do
+    nestable_list({position_field: :sorting_position})
+
+    edit do
+      field :published
+      field :image
+      field :name
+      field :model_name
+      field :year
+    end
+  end
+
+  config.model InteriorSlide do
+    nestable_list({position_field: :sorting_position})
+
+    edit do
+      field :image
+    end
   end
 end

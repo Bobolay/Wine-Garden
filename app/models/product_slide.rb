@@ -11,4 +11,9 @@ class ProductSlide < ActiveRecord::Base
     allow_delete_attachment attachment_name
     do_not_validate_attachment_file_type attachment_name
   end
+
+  has_cache
+  def cache_instances
+    [Pages.home]
+  end
 end

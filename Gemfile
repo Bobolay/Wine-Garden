@@ -95,3 +95,14 @@ gem 'require_reloader'
 gem 'thin'
 
 #gem 'i18n-active_record', :require => 'i18n/active_record'
+
+
+
+# optimization for production
+gem "htmlcompressor"
+gem 'rack-page_caching'
+gem 'paperclip-optimizer'
+gem 'image_optim'
+gem 'image_optim_pack'
+gem 'asset-image-opt'
+gem 'sprockets-image_compressor'

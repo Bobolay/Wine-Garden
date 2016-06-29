@@ -10,5 +10,7 @@ class Pages::Home < Cms::Page
   #has_image :publications_image, styles: full_screen_image_styles
   #has_image :contact_image, styles: full_screen_image_styles
 
-
+  def url(*args)
+    ""
+  end
 end

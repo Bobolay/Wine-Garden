@@ -191,7 +191,7 @@
           - @interior_components.each_with_index do |item, index|
             - odd = index % 2 == 1
             - even = !odd
-             - if even
+            - if even
               .large-6.medium-6.small-12.columns.z-index
                 .text.left-to-right
                   p.subtitle-uppercased = raw item.name
@@ -200,7 +200,7 @@
                   .white-square-right
               .large-6.medium-6.small-12.columns
                 .background-photo.right-to-left style="background-image: url(#{item.image.url(:large)})"
-             - else
+            - else
               .large-6.medium-6.small-12.go-right.columns.z-index
                 .text.right-to-left
                   p.subtitle-uppercased = raw item.name

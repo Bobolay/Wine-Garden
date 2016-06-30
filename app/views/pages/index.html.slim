@@ -1,98 +1,98 @@
 .big-wrapper
-	
+  
 
-	.banner-container.main-banner
-		ul.bxslider
+  .banner-container.main-banner
+    ul.bxslider
             - @main_slides.each do |slide|
                 .img-container style="background-image: url(#{slide.image.url(:large)})"
-		.inner-container
-			.top
-				.logo = inline_svg "logo/logo.svg"
-				p.super-small Мукачево, Червона гора, 1а
-			.middle	
-				p.main-subtitle непередбачувана оригінальність
-				p.main-title у кожній страві
-				.svg-and-lines-on-banner = inline_svg "icons/grape.svg"
-			.middle-button
-				a.button href="#form"
-					.frame
-					span = inline_svg "icons/spoon-folk-button.svg"
-					p.button-text замовити столик
-			.bottom
-				p.georgia Дізнайтеся про нас
-				.arrow-down = inline_svg "icons/arrow-down.svg"
-				.arrow-down-inside = inline_svg "icons/arrow-down-inside.svg"
-		.top-frame-1
-		.top-frame-2
+    .inner-container
+      .top
+        .logo = inline_svg "logo/logo.svg"
+        p.super-small Мукачево, Червона гора, 1а
+      .middle  
+        p.main-subtitle непередбачувана оригінальність
+        p.main-title у кожній страві
+        .svg-and-lines-on-banner = inline_svg "icons/grape.svg"
+      .middle-button
+        a.button href="#form"
+          .frame
+          span = inline_svg "icons/spoon-folk-button.svg"
+          p.button-text замовити столик
+      .bottom
+        p.georgia Дізнайтеся про нас
+        .arrow-down = inline_svg "icons/arrow-down.svg"
+        .arrow-down-inside = inline_svg "icons/arrow-down-inside.svg"
+    .top-frame-1
+    .top-frame-2
 
-				
-
-
-
-
-	.about-us
-		.row.collapse
-			.large-12.medium-12.small-12.columns.shadow-container
-				.row.collapse
-					.large-4.medium-6.small-12.columns
-						.square
-							.white-background
-								.text-middle
-									p.subtitle Ресторан-винарня
-									p.subtitle-uppercased &#171;винний сад&#187;
-									.svg-and-lines-small = inline_svg "icons/grape.svg"
-									p.regular Якщо Вам набридли міський шум і повсякденні турботи, з’явилося бажання комфортно відпочити та спробувати витончені страви та багатий букет вин – відкрийте для себе новий ресторан-винарню «Винний сад» у місті Мукачево.
-					.large-8.medium-6.small-12.columns
-						.square-half
-							.background-photo style="background-image: url(#{asset_path('main/about_1.jpg')})"
-					.large-8.medium-6.small-12.go-right.columns
-						.square-half
-							.white-background	
-								.text
-									p.subtitle Атмосфера закладу
-									p.regular Вишукано оброблений інтер’єр ресторану, його затишна атмосфера, смачне та різноманітне меню припадуть Вам до душі. «Винний сад» – це місце для незабутнього дозвілля, приємних зустрічей та ділового спілкування.
-					.large-4.medium-6.small-12.go-left.columns
-						.square
-							.background-photo style="background-image: url(#{asset_path('main/about_2.jpg')})"
-	
-
-	.banner-container.parallax-window data-image-src="#{asset_path('main/banner2.jpg')}" data-parallax="scroll"
-
-		.section-text
-			p.section-title наша кухня
-			.svg-and-lines = inline_svg "icons/chef-hat.svg"
-		.side-frame-1
-		.side-frame-2
-	.our-kitchen
-		.row.collapse
-			.large-10.large-centered.medium-10.medium-centered.small-12.columns
-				.row.collapse
-					.large-5.medium-5.small-5.columns
-						.chef-container
-							.chef-photo style="background-image: url(#{asset_path('main/chef.png')})"
-					.large-7.medium-7.small-12.columns.shadow-container
-						.inner-container
-							.text
-								p.subtitle-uppercased наша кухня
-								p.regular Спробуйте новий смак вишуканих страв європейської та азіатської кухні. Кулінарне мистецтво наших кухарів не залишить байдужими справжніх гурманів.
-							.square-container
-								.square-middle
-							.background-photo style="background-image: url(#{asset_path('main/kitchen.jpg')})"
+        
 
 
 
 
+  .about-us
+    .row.collapse
+      .large-12.medium-12.small-12.columns.shadow-container
+        .row.collapse
+          .large-4.medium-6.small-12.columns
+            .square
+              .white-background
+                .text-middle
+                  p.subtitle Ресторан-винарня
+                  p.subtitle-uppercased &#171;винний сад&#187;
+                  .svg-and-lines-small = inline_svg "icons/grape.svg"
+                  p.regular Якщо Вам набридли міський шум і повсякденні турботи, з’явилося бажання комфортно відпочити та спробувати витончені страви та багатий букет вин – відкрийте для себе новий ресторан-винарню «Винний сад» у місті Мукачево.
+          .large-8.medium-6.small-12.columns
+            .square-half
+              .background-photo style="background-image: url(#{asset_path('main/about_1.jpg')})"
+          .large-8.medium-6.small-12.go-right.columns
+            .square-half
+              .white-background  
+                .text
+                  p.subtitle Атмосфера закладу
+                  p.regular Вишукано оброблений інтер’єр ресторану, його затишна атмосфера, смачне та різноманітне меню припадуть Вам до душі. «Винний сад» – це місце для незабутнього дозвілля, приємних зустрічей та ділового спілкування.
+          .large-4.medium-6.small-12.go-left.columns
+            .square
+              .background-photo style="background-image: url(#{asset_path('main/about_2.jpg')})"
+  
 
-	.banner-container.parallax-window data-image-src="#{asset_path('main/banner3.jpg')}" data-parallax="scroll"
+  .banner-container.parallax-window data-image-src="#{asset_path('main/banner2.jpg')}" data-parallax="scroll"
 
-		.section-text
-			p.section-title фірмові страви
-			.svg-and-lines = inline_svg "icons/food-white.svg"
-		.side-frame-1
-		.side-frame-2
-	.our-dishes
-		.row.collapse
-			.large-12.medium-12.small-12.columns
+    .section-text
+      p.section-title наша кухня
+      .svg-and-lines = inline_svg "icons/chef-hat.svg"
+    .side-frame-1
+    .side-frame-2
+  .our-kitchen
+    .row.collapse
+      .large-10.large-centered.medium-10.medium-centered.small-12.columns
+        .row.collapse
+          .large-5.medium-5.small-5.columns
+            .chef-container
+              .chef-photo style="background-image: url(#{asset_path('main/chef.png')})"
+          .large-7.medium-7.small-12.columns.shadow-container
+            .inner-container
+              .text
+                p.subtitle-uppercased наша кухня
+                p.regular Спробуйте новий смак вишуканих страв європейської та азіатської кухні. Кулінарне мистецтво наших кухарів не залишить байдужими справжніх гурманів.
+              .square-container
+                .square-middle
+              .background-photo style="background-image: url(#{asset_path('main/kitchen.jpg')})"
+
+
+
+
+
+  .banner-container.parallax-window data-image-src="#{asset_path('main/banner3.jpg')}" data-parallax="scroll"
+
+    .section-text
+      p.section-title фірмові страви
+      .svg-and-lines = inline_svg "icons/food-white.svg"
+    .side-frame-1
+    .side-frame-2
+  .our-dishes
+    .row.collapse
+      .large-12.medium-12.small-12.columns
                 - @dishes.each_with_index do |item, index|
                   - odd = index % 2 == 1
                   - even = !odd
@@ -139,17 +139,17 @@
 
 
 
-	.wine-cellar
-		.wine-text
-			p.section-title винні погреби
-			.svg-and-lines = inline_svg "icons/barrel.svg"
-			p.desktop Пориньте в атмосферу давнини вдало поєднану з сучасністю, відвідавши винні погреби винарні &#171;Винний сад&#187;. Переходячи з печери в печеру та куштуючи вино, Ви маєте змогу відчути багатовікову історію, яку зберігають стіни погребу, та в думках поринути в глибину віків і відчути смак та аромат цього чудового напою сивої давнини. Ми відкриємо для Вас всі тонкощі та грані мистецтва виноробства і таким чином здивуємо не лише новачка, але й гурмана.
-	.sliders-wrapper
-		.row.collapse.full-width
-			.large-6.medium-6.small-12.columns
-				.square
-					.slider-container
-						ul.bxslider
+  .wine-cellar
+    .wine-text
+      p.section-title винні погреби
+      .svg-and-lines = inline_svg "icons/barrel.svg"
+      p.desktop Пориньте в атмосферу давнини вдало поєднану з сучасністю, відвідавши винні погреби винарні &#171;Винний сад&#187;. Переходячи з печери в печеру та куштуючи вино, Ви маєте змогу відчути багатовікову історію, яку зберігають стіни погребу, та в думках поринути в глибину віків і відчути смак та аромат цього чудового напою сивої давнини. Ми відкриємо для Вас всі тонкощі та грані мистецтва виноробства і таким чином здивуємо не лише новачка, але й гурмана.
+  .sliders-wrapper
+    .row.collapse.full-width
+      .large-6.medium-6.small-12.columns
+        .square
+          .slider-container
+            ul.bxslider
                             - @interior_slides.each do |slide|
                                 li
                                     .img-container style="background-image: url(#{slide.image.url(:large)})"
@@ -158,10 +158,10 @@
                             - @interior_slides.each_with_index do |slide, index|
                                 a data-slide-index=index href=""
 
-			.large-6.medium-6.small-12.columns
-				.square
-					.slider-container2
-						ul.bxslider2
+      .large-6.medium-6.small-12.columns
+        .square
+          .slider-container2
+            ul.bxslider2
                             - @product_slides.each do |slide|
                                 li
                                     .img-container style="background-image: url(#{slide.image.url(:large)})"
@@ -170,114 +170,114 @@
                                         p.subtitle-uppercased = raw slide.product_model_name
                                         p.regular Рік розливу: #{slide.year}
 
-					.wine-arrow-left = inline_svg "icons/wine-arrow-left.svg"
-					.wine-arrow-right = inline_svg "icons/wine-arrow-right.svg"
+          .wine-arrow-left = inline_svg "icons/wine-arrow-left.svg"
+          .wine-arrow-right = inline_svg "icons/wine-arrow-right.svg"
 
 
 
 
 
-	.banner-container.parallax-window data-image-src="#{asset_path('main/banner4.jpg')}" data-parallax="scroll"
+  .banner-container.parallax-window data-image-src="#{asset_path('main/banner4.jpg')}" data-parallax="scroll"
 
-		.section-text
-			p.section-title інтер'єр та екстер'єр
-			.svg-and-lines = inline_svg "icons/cup.svg"
-		.side-frame-1
-		.side-frame-2
-	.restoran-interior
-		.row.collapse
-			.large-12.medium-12.small-12.columns.shadow-container
-				.row.collapse
+    .section-text
+      p.section-title інтер'єр та екстер'єр
+      .svg-and-lines = inline_svg "icons/cup.svg"
+    .side-frame-1
+    .side-frame-2
+  .restoran-interior
+    .row.collapse
+      .large-12.medium-12.small-12.columns.shadow-container
+        .row.collapse
           - @interior_components.each_with_index do |item, index|
             - odd = index % 2 == 1
             - even = !odd
-           	- if even
-							.large-6.medium-6.small-12.columns.z-index
-		            .text.left-to-right
-		              p.subtitle-uppercased = raw item.name
-		              p.person-numbers = item.label
-		              p.regular = raw item.description
-		              .white-square-right
-		          .large-6.medium-6.small-12.columns
-		            .background-photo.right-to-left style="background-image: url(#{item.image.url(:large)})"
-           	- else
-							.large-6.medium-6.small-12.go-right.columns.z-index
-		            .text.right-to-left
-		              p.subtitle-uppercased = raw item.name
-		              p.person-numbers = item.label
-		              p.regular = raw item.description
-		              .white-square-left
-		          .large-6.medium-6.small-12.go-left.columns
-		            .background-photo.left-to-right style="background-image: url(#{item.image.url(:large)})"
+             - if even
+              .large-6.medium-6.small-12.columns.z-index
+                .text.left-to-right
+                  p.subtitle-uppercased = raw item.name
+                  p.person-numbers = item.label
+                  p.regular = raw item.description
+                  .white-square-right
+              .large-6.medium-6.small-12.columns
+                .background-photo.right-to-left style="background-image: url(#{item.image.url(:large)})"
+             - else
+              .large-6.medium-6.small-12.go-right.columns.z-index
+                .text.right-to-left
+                  p.subtitle-uppercased = raw item.name
+                  p.person-numbers = item.label
+                  p.regular = raw item.description
+                  .white-square-left
+              .large-6.medium-6.small-12.go-left.columns
+                .background-photo.left-to-right style="background-image: url(#{item.image.url(:large)})"
 
 
 
-	.banner-container.parallax-window data-image-src="#{asset_path('main/banner5.jpg')}" data-parallax="scroll"
+  .banner-container.parallax-window data-image-src="#{asset_path('main/banner5.jpg')}" data-parallax="scroll"
 
-		.section-text
-			p.section-title зарезервувати столик
-			.svg-and-lines = inline_svg "icons/spoon-folk.svg"
-		.side-frame-1
-		.side-frame-2
-	= render "order_request_form"
-	
-
-
-
-	#googleMap
-	.frame-for-map
-		.bottom-frame-map
-		.right-frame-map
-		.left-frame-map
-		.shadow-wrapper
-			.shadow
-	
+    .section-text
+      p.section-title зарезервувати столик
+      .svg-and-lines = inline_svg "icons/spoon-folk.svg"
+    .side-frame-1
+    .side-frame-2
+  = render "order_request_form"
+  
 
 
 
+  #googleMap
+  .frame-for-map
+    .bottom-frame-map
+    .right-frame-map
+    .left-frame-map
+    .shadow-wrapper
+      .shadow
+  
 
-	.contact-us
-		.row.collapse
-			.large-10.large-centered.medium-10.medium-centered.small-12.columns.shadow-container
-				.container
-					.inner-text	
-						.subtitle-uppercased контакти
-						.svg-and-lines-small = inline_svg "icons/contacts-phone-wine.svg"
-						.row
-							.large-4.medium-4.small-12.columns
-								.svg-icon = inline_svg "icons/contacts-phone.svg"
-								p.small телефони
-								p.bigger +38 050 739 0101
-							.large-4.medium-4.small-12.columns
-								.svg-icon = inline_svg "icons/contacts-geo.svg"
-								p.small адреса
-								p.bigger вул. Червона гора, 1а Мукачево, Україна
-							.large-4.medium-4.small-12.columns
-								.svg-icon = inline_svg "icons/contacts-time.svg"
-								p.small працюємо
-								p.bigger
-									| 12
-									span 00
-									|  &mdash; 22
-									span 00
-					.social
-						a.social-button
-							.icon = inline_svg "icons/social-fb.svg"
-						a.social-button
-							.icon = inline_svg "icons/social-google.svg"
-						a.social-button
-							.icon = inline_svg "icons/social-utube.svg"	
-	
 
-	.footer
-		.row
-		 	.large-6.medium-12.small-12.columns
-				.container	
-					.logo = inline_svg "icons/voronin-logo.svg"
-			 		p
-			 			| Розроблено в студії М.Вороніна
-			 			br
-			 			| в 2016 році
-		 	.large-6.medium-12.small-12.columns
-		 		.container
-		 			p &copy; 2016 Ресторан-винарня &#171;Винний сад&#187;
+
+
+  .contact-us
+    .row.collapse
+      .large-10.large-centered.medium-10.medium-centered.small-12.columns.shadow-container
+        .container
+          .inner-text  
+            .subtitle-uppercased контакти
+            .svg-and-lines-small = inline_svg "icons/contacts-phone-wine.svg"
+            .row
+              .large-4.medium-4.small-12.columns
+                .svg-icon = inline_svg "icons/contacts-phone.svg"
+                p.small телефони
+                p.bigger +38 050 739 0101
+              .large-4.medium-4.small-12.columns
+                .svg-icon = inline_svg "icons/contacts-geo.svg"
+                p.small адреса
+                p.bigger вул. Червона гора, 1а Мукачево, Україна
+              .large-4.medium-4.small-12.columns
+                .svg-icon = inline_svg "icons/contacts-time.svg"
+                p.small працюємо
+                p.bigger
+                  | 12
+                  span 00
+                  |  &mdash; 22
+                  span 00
+          .social
+            a.social-button
+              .icon = inline_svg "icons/social-fb.svg"
+            a.social-button
+              .icon = inline_svg "icons/social-google.svg"
+            a.social-button
+              .icon = inline_svg "icons/social-utube.svg"  
+  
+
+  .footer
+    .row
+       .large-6.medium-12.small-12.columns
+        .container  
+          .logo = inline_svg "icons/voronin-logo.svg"
+           p
+             | Розроблено в студії М.Вороніна
+             br
+             | в 2016 році
+       .large-6.medium-12.small-12.columns
+         .container
+           p &copy; 2016 Ресторан-винарня &#171;Винний сад&#187;

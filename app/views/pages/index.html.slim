@@ -150,25 +150,25 @@
         .square
           .slider-container
             ul.bxslider
-                            - @interior_slides.each do |slide|
-                                li
-                                    .img-container style="background-image: url(#{slide.image.url(:large)})"
+              - @interior_slides.each do |slide|
+                li
+                  .img-container style="background-image: url(#{slide.image.url(:large)})"
 
-                        .squares#bx-pager
-                            - @interior_slides.each_with_index do |slide, index|
-                                a data-slide-index=index href=""
+              .squares#bx-pager
+                - @interior_slides.each_with_index do |slide, index|
+                  a data-slide-index=index href=""
 
       .large-6.medium-6.small-12.columns
         .square
           .slider-container2
             ul.bxslider2
-                            - @product_slides.each do |slide|
-                                li
-                                    .img-container style="background-image: url(#{slide.image.url(:large)})"
-                                    .wine-type
-                                        p.regular = slide.name
-                                        p.subtitle-uppercased = raw slide.product_model_name
-                                        p.regular Рік розливу: #{slide.year}
+              - @product_slides.each do |slide|
+                  li
+                    .img-container style="background-image: url(#{slide.image.url(:large)})"
+                    .wine-type
+                        p.regular = slide.name
+                        p.subtitle-uppercased = raw slide.product_model_name
+                        p.regular Рік розливу: #{slide.year}
 
           .wine-arrow-left = inline_svg "icons/wine-arrow-left.svg"
           .wine-arrow-right = inline_svg "icons/wine-arrow-right.svg"

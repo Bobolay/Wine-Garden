@@ -154,9 +154,9 @@
                 li
                   .img-container style="background-image: url(#{slide.image.url(:large)})"
 
-              .squares#bx-pager
-                - @interior_slides.each_with_index do |slide, index|
-                  a data-slide-index=index href=""
+            .squares#bx-pager
+              - @interior_slides.each_with_index do |slide, index|
+                a data-slide-index=index href=""
 
       .large-6.medium-6.small-12.columns
         .square

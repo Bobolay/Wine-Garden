@@ -188,20 +188,27 @@
 		.row.collapse
 			.large-12.medium-12.small-12.columns.shadow-container
 				.row.collapse
-                    - @interior_components.each_with_index do |item, index|
-                        - odd = index % 2 == 1
-                        - even = !odd
-                        .large-6.medium-6.small-12.columns.z-index class="#{'go-left' if even} #{'go-right' if odd}"
-                            .text class="#{'left-to-right' if even} #{'right-to-left' if odd}"
-                                p.subtitle-uppercased = raw item.name
-                                - if item.label.present?
-                                    p.person-numbers = raw item.label
-                                p.regular = item.description
-                                div class="#{'white-square-right' if even} #{'white-square-left' if odd}"
-                        .large-6.medium-6.small-12.columns
-                            .background-photo style="background-image: url(#{item.image.url(:large)})" class="#{'left-to-right' if even} #{'right-to-left' if odd}"
-
-
+          - @interior_components.each_with_index do |item, index|
+            - odd = index % 2 == 1
+            - even = !odd
+           	- if even
+							.large-6.medium-6.small-12.columns.z-index
+		            .text.left-to-right
+		              p.subtitle-uppercased = raw item.name
+		              p.person-numbers = item.label
+		              p.regular = raw item.description
+		              .white-square-right
+		          .large-6.medium-6.small-12.columns
+		            .background-photo.right-to-left style="background-image: url(#{item.image.url(:large)})"
+           	- else
+							.large-6.medium-6.small-12.go-right.columns.z-index
+		            .text.right-to-left
+		              p.subtitle-uppercased = raw item.name
+		              p.person-numbers = item.label
+		              p.regular = raw item.description
+		              .white-square-left
+		          .large-6.medium-6.small-12.go-left.columns
+		            .background-photo.left-to-right style="background-image: url(#{item.image.url(:large)})"
 
 
 

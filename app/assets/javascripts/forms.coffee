@@ -39,9 +39,9 @@ $("form").on "submit", (e)->
   else
     
     $(".popup").addClass("animate-popup")
-    setTimeout (->
-      $(".popup").removeClass("animate-popup")
-    ), 3000
+    # setTimeout (->
+    #   $(".popup").removeClass("animate-popup")
+    # ), 3000
 
     $form = $(this)
     data_str = $form.serialize()

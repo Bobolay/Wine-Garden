@@ -101,8 +101,12 @@ gem 'thin'
 # optimization for production
 gem "htmlcompressor"
 gem 'rack-page_caching'
-gem 'paperclip-optimizer'
-gem 'image_optim'
-gem 'image_optim_pack'
-gem 'asset-image-opt'
+
+group :production do
+  gem 'paperclip-optimizer'
+  gem 'image_optim'
+  gem 'image_optim_pack'
+  gem 'asset-image-opt'
+end
+
 gem 'sprockets-image_compressor'

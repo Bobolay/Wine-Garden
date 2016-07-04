@@ -41,10 +41,22 @@ RailsAdmin.config do |config|
 
   config.included_models = []
 
-  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest, Dish, InteriorComponent, ProductSlide, InteriorSlide
+  config.include_models Pages::Home, Cms::MetaTags, FormConfigs::OrderRequest, OrderRequest, Dish, InteriorComponent, ProductSlide, InteriorSlide, User
 
 
   Cms.configure_rails_admin(config)
+
+  config.model User do
+    list do
+      field :email
+    end
+
+    edit do
+      field :email
+      field :password
+      field :password_confirmation
+    end
+  end
 
   config.model Pages::Home do
     field :seo_tags

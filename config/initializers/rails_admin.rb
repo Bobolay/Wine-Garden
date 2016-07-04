@@ -117,7 +117,7 @@ RailsAdmin.config do |config|
       field :published
       field :image
       field :name
-      field :model_name
+      field :product_model_name
       field :year
     end
   end

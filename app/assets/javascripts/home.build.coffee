@@ -3,9 +3,6 @@
 
 #= require jquery_ujs
 
-# require plugins/jquery.nicescroll.min
-# require niceScroll
-
 #= require plugins/jquery.bxslider
 #= require bxslider
 #= require forms
@@ -14,6 +11,8 @@
 
 #= require plugins/jquery.scrolldelta
 #= require scroll-banner
+
+#= require fullpage_banner_height
 
 #= require plugins/jquery-easing
 #= require plugins/jquery.appear
@@ -27,5 +26,3 @@
 
 # require plugins/jquery.validate.min
 # require validate
-
-#= fullpage_banner_height

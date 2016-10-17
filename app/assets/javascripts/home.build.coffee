@@ -27,3 +27,5 @@
 
 # require plugins/jquery.validate.min
 # require validate
+
+#= fullpage_banner_height

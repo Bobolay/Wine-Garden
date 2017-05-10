@@ -1,18 +1,21 @@
 doctype html
 html
   head
+    title Ресторан-винарня «Винний сад» - комфортний та вишуканий відпочинок в Мукачево
+    meta name="description" content="Унікальний інтер’єр ресторану, затишна атмосфера, витримані вина та смачна кухня припадуть Вам до душі. «Винний сад» – це місце для незабутнього дозвілля, приємних зустрічей та ділового спілкування"
+    meta name="keywords" content="Винний сад, Wine Garden, ресторани Мукачево, вино Закарпаття, відпочинок Мукачево, відпочинок Закарпаття, вина Мукачево, Закарпаття ресторан, Мукачево, дегустація вина, вино Закарпаття, кафе Мукачева"
     meta http-equiv="Content-Type" content="text/html; charset=utf-8"
     = seo_tags
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag    "home.build", media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    link href="/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"
-    link href="/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"
-    link href="/assets/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"
-    link href="/assets/favicon/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"
-    link href="/assets/favicon/favicon-228x228.png" rel="icon" sizes="228x228" type="image/png"
-    link href="/assets/favicon/touch-icon-ipad.png" rel="apple-touch-icon-precomposed" sizes="76x76"
-    link href="/assets/favicon/touch-icon-iphone-6plus.png" rel="apple-touch-icon-precomposed" sizes="180x180"
+    link href=asset_path("favicon/favicon-16x16.png") rel="icon" sizes="16x16" type="image/png"
+    link href=asset_path("favicon/favicon-32x32.png") rel="icon" sizes="32x32" type="image/png"
+    link href=asset_path("favicon-96x96.png") rel="icon" sizes="96x96" type="image/png"
+    link href=asset_path("favicon/favicon-196x196.png") rel="icon" sizes="196x196" type="image/png"
+    link href=asset_path("favicon/favicon-228x228.png") rel="icon" sizes="228x228" type="image/png"
+    link href=asset_path("favicon/touch-icon-ipad.png") rel="apple-touch-icon-precomposed" sizes="76x76"
+    link href=asset_path("favicon/touch-icon-iphone-6plus.png") rel="apple-touch-icon-precomposed" sizes="180x180"
   body
     = yield
     script src="http://maps.googleapis.com/maps/api/js"

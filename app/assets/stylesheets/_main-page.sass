@@ -43,6 +43,8 @@
 		width: 90%
 		text-align: center
 		z-index: 3
+		.button
+			display: none
 		.top, .middle, .middle-button, .bottom
 			+x-align
 		.top
@@ -59,11 +61,12 @@
 		.middle-button
 			top: 60%
 		.bottom
-			top: 90%
+			// top: 90%
+			bottom: 30px
 			cursor: pointer
 			min-width: 200px
 			@media #{$small-only}
-				top: 80%
+				// top: 80%
 			.arrow-down-inside
 				+x-align
 				top: 25px
@@ -377,6 +380,7 @@
 	background-color: #fff
 	position: relative
 	overflow: hidden
+	display: none
 	.subtitle-uppercased
 		line-height: 60px
 		text-align: center

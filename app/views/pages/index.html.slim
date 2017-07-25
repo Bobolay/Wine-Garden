@@ -212,14 +212,14 @@
 
 
 
-  .banner-container.parallax-window data-image-src="#{asset_path('main/banner5.jpg')}" data-parallax="scroll"
+  .banner-container.parallax-window data-image-src="#{asset_path('main/contact-bg.jpg')}" data-parallax="scroll"
 
     .section-text
-      p.section-title зарезервувати столик
-      .svg-and-lines = inline_svg "icons/spoon-folk.svg"
+      p.section-title Контакти та карта доїзду
+      .svg-and-lines = inline_svg "icons/map-location.svg"
     .side-frame-1
     .side-frame-2
-  = render "order_request_form"
+  / = render "order_request_form"
   
 
 
@@ -241,8 +241,8 @@
       .large-10.large-centered.medium-10.medium-centered.small-12.columns.shadow-container
         .container
           .inner-text  
-            .subtitle-uppercased контакти
-            .svg-and-lines-small = inline_svg "icons/contacts-phone-wine.svg"
+            / .subtitle-uppercased контакти
+            / .svg-and-lines-small = inline_svg "icons/contacts-phone-wine.svg"
             .row
               .large-4.medium-4.small-12.columns
                 .svg-icon = inline_svg "icons/contacts-phone.svg"
